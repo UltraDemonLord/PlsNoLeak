@@ -1692,7 +1692,7 @@ addcommand("calc", "Calculate an arithmetic expression. Usage: !calc <expression
     calculator(expression)
 end)
     addcommand("promote", "", function()
-	chat(guiname.." @ gg/ptMV25TK59")
+	chat(botname.." @ gg/ptMV25TK59")
 end)
 
     addcommand("kill", "", function()
