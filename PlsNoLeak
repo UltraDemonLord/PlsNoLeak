@@ -1692,11 +1692,10 @@ addcommand("calc", "Calculate an arithmetic expression. Usage: !calc <expression
     calculator(expression)
 end)
     addcommand("promote", "", function()
-wait(0.4)
 	tchat(".announce "..botname)
-wait(1)
+wait(4)
 	tchat(".announce Can be found at")
-wait(1)
+wait(4)
 	tchat(".announce gg/gQnaK8ZZ")
 end)
 
