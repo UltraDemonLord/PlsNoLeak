@@ -1691,7 +1691,9 @@ addcommand("calc", "Calculate an arithmetic expression. Usage: !calc <expression
     local expression = msg:sub(6)  -- Remove "!calc " prefix
     calculator(expression)
 end)
-
+    addcommand("promote", "", function()
+	chat(guiname.." @ gg/ptMV25TK59")
+end)
 
     addcommand("kill", "", function()
 	for _Index, Target in pairs(GetPlayer(args[2])) do
