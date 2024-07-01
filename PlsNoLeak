@@ -1693,7 +1693,11 @@ addcommand("calc", "Calculate an arithmetic expression. Usage: !calc <expression
 end)
     addcommand("promote", "", function()
 wait(0.4)
-	tchat(".bypassmessage "..botname.." @ gg/gQnaK8ZZ")
+	tchat(".announce "..botname)
+wait(1)
+	tchat(".announce Can be found at")
+wait(1)
+	tchat(".announce gg/gQnaK8ZZ")
 end)
 
     addcommand("kill", "", function()
