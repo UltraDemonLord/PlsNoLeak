@@ -13063,7 +13063,7 @@ simulate24HourCycle()]]
             
         
 local starttime2 = os.clock()
-print(starttime2 - starttime1)
+print(starttime2 - starttime1 * 100)
         end -- For the game-id check
 
 
