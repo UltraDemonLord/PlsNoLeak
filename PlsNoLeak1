@@ -7266,6 +7266,15 @@ task.spawn(function()
 	else
 		GUI:SendMessage(ScriptName, Settings["Welcome Message"])
 	end
+
+local starttime2 = os.clock()  -- Replace with your end time calculation
+
+-- Calculate the time difference in seconds
+local diff_seconds = starttime2 - loadtime
+
+-- Format the time difference to show seconds and milliseconds up to tenths place
+local formatted_time = string.format("%.1f", diff_seconds)
+
+GUI:SendMessage("Loadtime: " .. formatted_time .. " seconds")
+
 end)
---game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Loaded in "..tostring(math.floor((os.clock()-loadtime)*1000)).."ms", "All")
---print("Loaded in "..tostring(os.clock()-loadtime).."s / "..tostring(math.floor((os.clock()-loadtime)*1000)).."ms")
