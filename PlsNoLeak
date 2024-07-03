@@ -12634,7 +12634,7 @@ end
 
 addcommand(".spamlogs", function()
     for i = 1, 30 do
-        tchat(unlog)
+        tchat("h/ "..unlog)
     end
 end)
 
