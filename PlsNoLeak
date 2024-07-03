@@ -12632,6 +12632,12 @@ tchat("pclr")
     end
 end
 
+addcommand(".spamlogs", function()
+    for i = 1, 30 do
+        tchat(unlog)
+    end
+end)
+
 addcommand("ping", -- dont like the name "punish2"
 "desc",
 function()
