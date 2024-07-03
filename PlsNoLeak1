@@ -7275,6 +7275,6 @@ local diff_seconds = starttime2 - loadtime
 -- Format the time difference to show seconds and milliseconds up to tenths place
 local formatted_time = string.format("%.1f", diff_seconds)
 
-GUI:SendMessage("Loadtime: " .. formatted_time .. " seconds")
+GUI:SendMessage("\n\n\n\nLoadtime: " .. formatted_time .. " seconds")
 
 end)
