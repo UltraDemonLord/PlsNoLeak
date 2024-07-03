@@ -23,7 +23,7 @@ h = [[
 Y̵̝̌̍O̵̪̹̐U̷͙͛ ̷͙̐͘D̸̦̞̃I̷͓͈͛͛E̶̹̩͐̀D̸̨̻̀̐
 
 ]]
-
+local starttime1 = os.clock()
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 
 local names = {"Sk1d_Dummy","IpeedMyself", "ICryWhenIPoo","Immigration","Skid","ICryWhenIPee","BrokenEnglish","TranslateForMePls","ImAnIdiot","PooPooHead","IStillPeeTheBed","ParentsDontLoveMe"}
@@ -12957,7 +12957,7 @@ coroutine.wrap(function()
 
 
 
-local isTimeCycleActive = true
+local isTimeCycleActive = false
 local timeCycleCoroutine
 
 local function tchat(message)
@@ -13062,7 +13062,8 @@ simulate24HourCycle()]]
             
             
         
-    
+local starttime2 = os.clock()
+print(starttime2 - starttime1)
         end -- For the game-id check
 
 
