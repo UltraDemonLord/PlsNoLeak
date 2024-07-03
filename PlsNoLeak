@@ -13063,8 +13063,9 @@ simulate24HourCycle()]]
             
         
 local starttime2 = os.clock()
-chat(botname .. " Loadtime: " .. starttime2 - starttime1)
-
+local diff_seconds = starttime2 - starttime1
+local formatted_time = string.format("%.1f", diff_seconds)
+chat(botname .. " Loadtime: " .. formatted_time .. " seconds")
 
         end -- For the game-id check
 
