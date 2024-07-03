@@ -12590,7 +12590,7 @@ tchat("pclr")
 
 
         unlog = [[
-
+	 n\n\n\n\n\n\n\n\n\n\n\n\n\n
         n̷o̷ ̸l̶o̶g̵s̴ ̷h̶e̷r̴e̸ ̵m̸a̴t̸e̶
         n\n\n\n\n\n\n\n\n\n\n\n\n\n
 
@@ -12633,8 +12633,8 @@ tchat("pclr")
 end
 
 addcommand(".spamlogs","", function()
-    for i = 1, 30 do
-        tchat("h/ "..unlog)
+    for i = 1, 105 do
+        tchat("ff "..unlog)
     end
 end)
 
