@@ -2070,12 +2070,19 @@ end)
         game.Players:chat("gear me 221241923")
     end)
     
-    addcommand("cbomb", "", function()
+  addcommand("cbomb", "", function()
+    local function bombs()
+        for i = 1, 105 do
+            tchat("gear me 88146497")
+        end
+    end
 
-        tchat("spam gear me 88146497")
-        task.wait(2.4)
-        tchat("unspam")
-    end)
+    for j = 1, 5 do
+        bombs()
+        task.wait()  -- Assuming task.wait() is a function to wait for some time
+    end
+end)
+
 
  
 
