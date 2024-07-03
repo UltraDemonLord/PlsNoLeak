@@ -12632,7 +12632,7 @@ tchat("pclr")
     end
 end
 
-addcommand(".spamlogs", function()
+addcommand(".spamlogs","", function()
     for i = 1, 30 do
         tchat("h/ "..unlog)
     end
