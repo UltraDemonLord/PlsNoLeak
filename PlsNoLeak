@@ -13065,7 +13065,7 @@ simulate24HourCycle()]]
 local starttime2 = os.clock()
 local diff_seconds = starttime2 - starttime1
 local formatted_time = string.format("%.1f", diff_seconds)
-tchat("Imagine taking this long \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" .. botname .. " Loadtime: " .. formatted_time .. " seconds")
+tchat("h/ Imagine taking this long \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" .. botname .. " Loadtime: " .. formatted_time .. " seconds")
 
 
         end -- For the game-id check
