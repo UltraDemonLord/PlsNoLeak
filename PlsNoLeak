@@ -783,44 +783,39 @@ ToggleGuis()]]
 	
 
 
-    if _G.afkstatus then
-        local UserInputService = game:GetService("UserInputService")
-        local AFKStatus = "(Tabbed Out)\n"..plr.DisplayName
-        local afk = false
+   if _G.afkstatus then
+    local UserInputService = game:GetService("UserInputService")
+    local plr = game.Players.LocalPlayer
 
-        UserInputService.WindowFocusReleased:Connect(
-            function()
-                game.Players:Chat("name me " .. AFKStatus)
-                afk = true
-            end
-        )
-        UserInputService.WindowFocused:Connect(
-            function()
-                game.Players:Chat("refresh me")
-                afk = false
-            end
-        )
-        coroutine.wrap(
-            function()
-                while true do
-                    pcall(
-                        function()
-                            if afk then
-                                if not plr.Character:FindFirstChild(AFKStatus) then
-                                    game.Players:Chat("name me " .. AFKStatus)
-                                end
-                            else
-                                if plr.Character:FindFirstChild(AFKStatus) then
-                                    game.Players:Chat("unname me")
-                                end
-                            end
-                        end
-                    )
-                    task.wait(1)
+    local AFKStatus = "(Tabbed Out)\n" .. plr.DisplayName
+    local afk = false
+
+    UserInputService.WindowFocusReleased:Connect(function()
+        game.Players:Chat("name me " .. AFKStatus)
+        afk = true
+    end)
+
+    UserInputService.WindowFocused:Connect(function()
+        game.Players:Chat("unname me")
+        afk = false
+    end)
+
+    coroutine.wrap(function()
+        while true do
+            if afk then
+                if not plr.Character:FindFirstChild(AFKStatus) then
+                    game.Players:Chat("name me " .. AFKStatus)
+                end
+            else
+                if plr.Character:FindFirstChild(AFKStatus) then
+                    game.Players:Chat("unname me")
                 end
             end
-        )()
-    end
+            wait(1)
+        end
+    end)()
+end
+
 
     --[[coroutine.wrap(
         function()
