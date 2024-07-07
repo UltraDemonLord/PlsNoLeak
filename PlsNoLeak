@@ -1647,7 +1647,7 @@ local function calculator(expression)
     -- Check if expression is nil or empty
     if not expression or expression == "" then
         game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            .SayMessageRequest:FireServer("Error: No expression provided", "All")
+            :WaitForChild("SayMessageRequest"):FireServer("Error: No expression provided", "All")
         return
     end
 
@@ -1679,18 +1679,19 @@ local function calculator(expression)
         end
 
         game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            .SayMessageRequest:FireServer("Result: " .. result, "All")
+            :WaitForChild("SayMessageRequest"):FireServer("Result: " .. result, "All")
     else
         game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            .SayMessageRequest:FireServer("Error: Invalid expression", "All")
+            :WaitForChild("SayMessageRequest"):FireServer("Error: Invalid expression", "All")
     end
 end
 
--- Adding the calculator command
+
 addcommand("calc", "Calculate an arithmetic expression. Usage: !calc <expression>", function(msg)
     local expression = msg:sub(6)  -- Remove "!calc " prefix
     calculator(expression)
 end)
+
     addcommand("promote", "", function()
 	tchat(".announce "..botname)
 task.wait(3.5)
