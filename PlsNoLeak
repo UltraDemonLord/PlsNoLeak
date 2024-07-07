@@ -1637,40 +1637,28 @@ end)
         end
     end]]
     --// commands
-game.Players.LocalPlayer.Chatted:Connect(function(msg)
-    local splitted = msg:split(" ")
-    if splitted[1] == "calc" then
-        local num1 = tonumber(splitted[2])
-        local sign = splitted[3]
-        local num2 = tonumber(splitted[4])
-        local answer
-
-        if not num1 or not num2 then
-            chat("Error: Invalid numbers provided.")
-            return
-        end
-
-        if sign == "+" then
-            answer = num1 + num2
-        elseif sign == "-" then
-            answer = num1 - num2
-        elseif sign == "x" or sign == "*" then
-            answer = num1 * num2
-        elseif sign == "/" then
-            if num2 ~= 0 then
-                answer = num1 / num2
-            else
-                chat("Error: Division by zero.")
-                return
+game.Players.LocalPlayer.Chatted:Connect(
+    function(msg)
+        local splitted = msg:split(" ")
+        if splitted[1] == "calc" then --thanks knocks lol
+            local num1 = splitted[2]
+            local sign = splitted[3]
+            local num2 = splitted[4]
+            if sign == "+" then
+                answer = num1 + num2
+            elseif sign == "-" then
+                answer = num1 - num2
+            elseif sign == "x" or sign == "*" then
+                answer = num1 * num2
+            elseif sign == "/" then
+                if num1 ~= 0 and num2 ~= 0 then
+                    answer = num1 / num2
+                end
             end
-        else
-            chat("Error: Invalid operation.")
-            return
+            chat(answer)
         end
-
-        chat("Result:", answer)
     end
-end)
+)
 
 
 
