@@ -1637,75 +1637,41 @@ end)
         end
     end]]
     --// commands
--- Assuming addcommand is defined elsewhere, let's integrate the command
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local splitted = msg:split(" ")
+    if splitted[1] == "calc" then
+        local num1 = tonumber(splitted[2])
+        local sign = splitted[3]
+        local num2 = tonumber(splitted[4])
+        local answer
 
--- Adding the calculator command
-addcommand("calc", "Calculate an arithmetic expression. Usage: !calc <expression>", function(msg)
-    -- Check if the message is nil or doesn't start with "!calc "
-    if not msg or type(msg) ~= "string" or not msg:lower():match("^!calc%s") then
-        game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            :WaitForChild("SayMessageRequest"):FireServer("Error: Invalid command format. Usage: !calc <expression>", "All")
-        return
-    end
-    
-    -- Extract the expression by removing the "!calc " prefix
-    local expression = msg:sub(7)  -- Adjusted to remove "!calc " prefix
-    
-    -- Check if expression is empty after removing prefix
-    if not expression or expression == "" then
-        game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            :WaitForChild("SayMessageRequest"):FireServer("Error: No expression provided", "All")
-        return
-    end
-
-    -- Call the calculator function with the extracted expression
-    calculator(expression)
-end)
-
-
--- Calculator function
-local function calculator(expression)
-    -- Check if expression is nil or empty
-    if not expression or expression == "" then
-        game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            :WaitForChild("SayMessageRequest"):FireServer("Error: No expression provided", "All")
-        return
-    end
-
-    -- Remove leading and trailing spaces
-    expression = expression:match("^%s*(.-)%s*$")
-
-    -- Pattern matching for basic arithmetic operations
-    local num1, op, num2 = expression:match("(%d+)([%+%-%*/x])(%d+)")
-    
-    if num1 and op and num2 then
-        num1 = tonumber(num1)
-        num2 = tonumber(num2)
-        local result
-
-        if op == "+" then
-            result = num1 + num2
-        elseif op == "-" then
-            result = num1 - num2
-        elseif op == "*" or op == "x" then
-            result = num1 * num2
-        elseif op == "/" then
-            if num2 ~= 0 then
-                result = num1 / num2
-            else
-                result = "Error: Division by zero"
-            end
-        else
-            result = "Error: Invalid operation"
+        if not num1 or not num2 then
+            chat("Error: Invalid numbers provided.")
+            return
         end
 
-        game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            :WaitForChild("SayMessageRequest"):FireServer("Result: " .. result, "All")
-    else
-        game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-            :WaitForChild("SayMessageRequest"):FireServer("Error: Invalid expression", "All")
+        if sign == "+" then
+            answer = num1 + num2
+        elseif sign == "-" then
+            answer = num1 - num2
+        elseif sign == "x" or sign == "*" then
+            answer = num1 * num2
+        elseif sign == "/" then
+            if num2 ~= 0 then
+                answer = num1 / num2
+            else
+                chat("Error: Division by zero.")
+                return
+            end
+        else
+            chat("Error: Invalid operation.")
+            return
+        end
+
+        chat("Result:", answer)
     end
-end
+end)
+
 
 
     addcommand("promote", "", function()
