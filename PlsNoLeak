@@ -8,7 +8,7 @@
 
 _G.permadmin = true -- this will take a pad as soon as you join, set to true if you dont have perm (will skip servers with no pads when autocrashing)
 _G.removeobbykill = true -- will auto remove obby kill once you join the server
-_G.autoantivamp = true -- will auto blacklist vamp gear
+_G.autoantivamp = false -- will auto blacklist vamp gear
 _G.afkstatus = true
 _G.whitelisted = {} -- basically grants them immunity to serverlocks and skips server when autocrashing
 _G.chatlogs = true
