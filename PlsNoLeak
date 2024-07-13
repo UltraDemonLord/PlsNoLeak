@@ -1812,7 +1812,8 @@ game.Players:Chat("tp "..Target.Name.." me")
 task.wait(.15)
 for i=1,3 do
 for i=1,100 do
-game.Players:Chat("hat "..Target.Name.." 18101265026")
+game.Players:Chat("hat "..Target.Name.." 18113316616")
+game.Players:Chat("hat "..Target.Name.." 18136434708")
 end
 task.wait(1)
 end
