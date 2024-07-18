@@ -1,7 +1,7 @@
 
 
 local Settings = {
-    ["Autorun Commands"] = {"runcommand antihat","perm","blacklisttools DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","fixvelocity","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
+    ["Autorun Commands"] = {"runcommand antihat","perm","blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","fixvelocity","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
    ["Default Whitelisted"] = {game.Players.LocalPlayer.Name, "Altsarecooleh", "NetflixCE2023", "Chase1880", "killer0900", "shawnofthedead", "SmellMaPits111222"},
     ["Default Banned"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People banned by default [Buggy]
     ["Default Softlocked"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People softlocked by Default
