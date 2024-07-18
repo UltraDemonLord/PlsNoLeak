@@ -1740,7 +1740,7 @@ end))
     -- Function to send the hat command 105 times with a small delay
     local function giveHats()
         for i = 1, 105 do
-            game.Players:Chat("hat me 18101265026")
+            game.Players:Chat("hat me 18136434708")
             task.wait() -- Small delay between each command to avoid overwhelming the server
         end
     end
@@ -1810,7 +1810,7 @@ task.wait(.15)
 game.Players:Chat("blind "..Target.Name)
 game.Players:Chat("tp "..Target.Name.." me")
 task.wait(.15)
-for i=1,10 do
+for i=1,6 do
 for i=1,100 do
 game.Players:Chat("hat "..Target.Name.." 18113316616")
 game.Players:Chat("hat "..Target.Name.." 18136434708")
