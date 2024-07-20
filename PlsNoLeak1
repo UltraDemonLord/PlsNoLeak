@@ -816,8 +816,8 @@ addCommand("stonemap", {}, function()
     local player = game.Players.LocalPlayer
 
     -- Equip tools
-    player:Chat('gear me 59190534')
-    player:Chat('gear me 59190534')
+    game.Players:Chat('gear me 59190534')
+   game.Players:Chat('gear me 59190534')
     wait()
 
     -- Use tools
