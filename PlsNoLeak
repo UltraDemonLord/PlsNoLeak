@@ -1715,6 +1715,7 @@ for i = 1, 100 do
 	wait()
 	tchat("The test will begin on the word start. On your mark, get ready, start.")
 	end
+		end
     end)
 	
     addcommand("bbox", "", function()
