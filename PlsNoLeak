@@ -1657,9 +1657,11 @@ task.wait(1)
 task.wait(1.5)
 	chat("Can be found at")
 task.wait(1.5)
-	tchat("h/this is the one \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ptMV25TK59")
+for i = 1, 5 do
+task.wait(1)
+	tchat(".bypassmessage ptMV25TK59")
 task.wait(1.5)
-	chat("check in logs")
+	end
 end)
 
     addcommand("kill", "", function()
