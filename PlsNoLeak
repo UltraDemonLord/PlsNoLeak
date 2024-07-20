@@ -1663,6 +1663,7 @@ game.Players.LocalPlayer.Chatted:Connect(
 
 
     addcommand("promote", "", function()
+task.wait(1)
 	chat(botname)
 task.wait(1.5)
 	chat("Can be found at")
