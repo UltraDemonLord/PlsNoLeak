@@ -1511,18 +1511,7 @@ function GetPlayer(target)
 end
 
 -- Example command to test
-addcommand("whosabacon", "Test command description", function()
-    local targetPlayers = GetPlayer("bacons")
-    if targetPlayers then
-        for _, p in pairs(targetPlayers) do
-		wait(.5)
-            chat(p.Name .. " Is A Bacon.")
-		wait(.5)
-        end
-    else
-        chat("No Bacons Found.")
-    end
-end)
+
 
 
 
@@ -1702,6 +1691,19 @@ addcommand("sznsword", "", function()
 		wait(1)
 	tchat("usetools")
 	end)
+
+addcommand("whosabacon", "Test command description", function()
+    local targetPlayers = GetPlayer("bacons")
+    if targetPlayers then
+        for _, p in pairs(targetPlayers) do
+		wait(.5)
+            chat(p.Name .. " Is A Bacon.")
+		wait(.5)
+        end
+    else
+        chat("No Bacons Found.")
+    end
+end)
 
  addcommand("pacerlog", "", function()
     for j = 1, 6 do
