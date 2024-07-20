@@ -14,7 +14,7 @@ local Settings = {
     ["Welcome Message"] = "I Dont Cheat, Its Just A Really Good Gaming Chair!", -- Change the message that is shown when running the script, default "Successfully ran."
     
     ["Auto Crasher"] = { -- Automatically serverhop and crash servers
-	["Enabled"] = false,
+	["Enabled"] = true,
 	["Message"] = "", -- Message to send upon before crashing, set to nil if no message
 	["Serverhop Time"] = 7, -- Serverhops after specified amount of time
 	["Timeout"] = 9, -- Gives up on joining a server after a specified amount of time
