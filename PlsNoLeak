@@ -1663,17 +1663,11 @@ game.Players.LocalPlayer.Chatted:Connect(
 
 
     addcommand("promote", "", function()
-	tchat(".announce "..botname)
-task.wait(3.5)
-	tchat(".announce Can be found at")
-task.wait(3.5)
-	tchat(".announce gQnaK8ZZ")
-task.wait()
-	tchat(".announce gQnaK8ZZ")
-task.wait()
-	tchat(".announce gQnaK8ZZ")
-task.wait()
-	tchat(".announce gQnaK8ZZ")
+	chat(botname)
+task.wait(1.5)
+	chat("Can be found at")
+task.wait(1.5)
+	chat("gQnaK8ZZ")
 end)
 
     addcommand("kill", "", function()
