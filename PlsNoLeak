@@ -1671,7 +1671,6 @@ task.wait(1.5)
 	tchat("h/this is the one \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ptMV25TK59")
 task.wait(1.5)
 	chat("check in logs")
-end
 end)
 
     addcommand("kill", "", function()
