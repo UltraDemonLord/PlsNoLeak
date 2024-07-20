@@ -15,7 +15,7 @@ local Settings = {
     
     ["Auto Crasher"] = { -- Automatically serverhop and crash servers
 	["Enabled"] = true,
-	["Message"] = "", -- Message to send upon before crashing, set to nil if no message
+	["Message"] = "Good Bye my Friend, Back to Tha Lobby!", -- Message to send upon before crashing, set to nil if no message
 	["Serverhop Time"] = 7, -- Serverhops after specified amount of time
 	["Timeout"] = 9, -- Gives up on joining a server after a specified amount of time
 	["Commands"] = {"music 6772846771"}, -- Commands to run on join
