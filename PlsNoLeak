@@ -1703,7 +1703,7 @@ addcommand("sznsword", "", function()
 
  addcommand("pacerlog", "", function()
     for j = 1, 6 do
-        for i = 1, 130 do
+        for i = 1, 15 do
             tchat("ff The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues.")
             wait()
             tchat("ff The 20 meter Pacer test will begin in 30 seconds. Line up at the start.")
