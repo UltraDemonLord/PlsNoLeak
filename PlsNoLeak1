@@ -807,26 +807,26 @@ addCommand("stonemap", {}, function()
 
     -- Equip tools
     game.Players:Chat('gear me 59190534')
-   game.Players:Chat('gear me 59190534')
-    wait()
+    game.Players:Chat('gear me 59190534')
+    wait(1)  -- Yield for 1 second
 
     -- Use tools
     game.Players:Chat('usetools')
     
     -- Wait until the tools are in the backpack
-    repeat sleep() until #player.Backpack:GetChildren() >= 2
+    repeat wait(0.1) until #player.Backpack:GetChildren() >= 2
     
     -- Assign tools to variables
     stoneTool1 = player.Backpack:GetChildren()[1]
     stoneTool2 = player.Backpack:GetChildren()[2]
 
-    sleep()
+    wait(0.1)
     
     -- Move tools to character
     stoneTool1.Parent = player.Character
     stoneTool2.Parent = player.Character
     
-    sleep()
+    wait(0.1) 
 
     -- Use threads to send key press actions
     spawn(function()
@@ -836,7 +836,6 @@ addCommand("stonemap", {}, function()
         stoneTool2.ServerControl:InvokeServer("KeyPress", {["Key"] = "x", ["Down"] = true})
     end)
 end)
-
 addCommand("altcmds",{},function()
     for i,v in pairs(commandlist) do
         local lister = ""
