@@ -1668,7 +1668,7 @@ task.wait(1)
 task.wait(1.5)
 	chat("Can be found at")
 task.wait(1.5)
-	chat("gQnaK8ZZ")
+	chat("ptMV25TK59")
 end)
 
     addcommand("kill", "", function()
