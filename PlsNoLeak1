@@ -800,16 +800,6 @@ addCommand("scriptname",{"name"},function(args)
     GUI:SendMessage(ScriptName, "Set script name to "..ScriptName.." successfully.")
 end)
 
-function wait(seconds)
-    -- Wait function to pause execution for a given number of seconds
-    local start = os.time()
-    repeat until os.time() > start + seconds
-end
-
-function sleep()
-    -- Simple sleep function for shorter pauses
-    wait(1)
-end
 
 addCommand("stonemap", {}, function()
     local stoneTool1, stoneTool2
