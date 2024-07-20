@@ -1668,7 +1668,7 @@ task.wait(1)
 task.wait(1.5)
 	chat("Can be found at")
 task.wait(1.5)
-for i = 1, 5
+for i = 1, 5 do
 task.wait(1)
 	tchat(".bypassmessage ptMV25TK59")
 task.wait(1)
