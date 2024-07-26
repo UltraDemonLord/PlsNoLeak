@@ -4,7 +4,7 @@ local Settings = {
     ["Autorun Commands"] = {"perm","blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","fixvelocity","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
    ["Default Whitelisted"] = {game.Players.LocalPlayer.Name, "Altsarecooleh", "NetflixCE2023", "Chase1880", "killer0900", "shawnofthedead", "SmellMaPits111222"},
     ["Default Banned"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People banned by default [Buggy]
-    ["Default Softlocked"] = {"atprog","normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People softlocked by Default
+    ["Default Softlocked"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People softlocked by Default
     ["Player Crash Settings"] = {["Vampire"] = false, ["Players"] = {}}, -- Automatically crashes server if one of these players are in it
     ["Prefix"] = ".", -- Prefix used for running commands
     ["Person299's Admin"] = true, -- If you do not own Person299's Admin, some commands will be fixed appropriately
