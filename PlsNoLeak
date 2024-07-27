@@ -1813,15 +1813,15 @@ task.wait(.15)
 game.Players:Chat("blind "..Target.Name)
 game.Players:Chat("tp "..Target.Name.." me")
 task.wait(.15)
-for i=1,6 do
-for i=1,15 do
+for i=1,10 do
+for i=1,100 do
 game.Players:Chat("hat "..Target.Name.." 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018137588505")
 game.Players:Chat("hat "..Target.Name.." 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018131548964")
 end
 task.wait(1)
 end
 task.wait(.25)
-game.Players:Chat("size "..Target.Name.." nan")
+game.Players:Chat("removelimbs "..Target.Name)
 				wait()
 game.Players:Chat("clone "..Target.Name)
 				wait()
