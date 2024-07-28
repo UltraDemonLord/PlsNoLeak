@@ -2506,7 +2506,7 @@ print("RTX toggle script loaded.")
                 Target.CharacterAdded:Connect(function(c)
                     task.wait(.4)
                     if not c:FindFirstChild("DuffelBag") then
-                        tchat("char "..Target.Name.." 3470687193")
+                        tchat("char "..Target.Name.." 6228961668")
                     end 
                 end) 
             end 
