@@ -25,7 +25,7 @@ Y̵̝̌̍O̵̪̹̐U̷͙͛ ̷͙̐͘D̸̦̞̃I̷͓͈͛͛E̶̹̩͐̀D̸̨̻̀̐
 ]]
 local starttime1 = os.clock()
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
-local promoname = "gg/Q4WDbAZbKy"
+local promoname = "/Q4WDbAZbKy"
 local names = {"Sk1d_Dummy","IpeedMyself", "ICryWhenIPoo","Immigration","Skid","ICryWhenIPee","BrokenEnglish","TranslateForMePls","ImAnIdiot","PooPooHead","IStillPeeTheBed","ParentsDontLoveMe"}
 local connections  = {} 
 _G.timeout = {}
