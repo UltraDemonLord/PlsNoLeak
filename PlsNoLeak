@@ -2502,11 +2502,11 @@ print("RTX toggle script loaded.")
 		"a",
 		function()
 			for _Index, Target in pairs(GetPlayer(args[2])) do
-                tchat("char "..Target.Name.." 3470687193")
+                tchat("char "..Target.Name.." 6228961668")
                 Target.CharacterAdded:Connect(function(c)
                     task.wait(.4)
-                    if not c:FindFirstChild("DuffelBag") then
-                        tchat("char "..Target.Name.." 6228961668")
+                    --if not c:FindFirstChild("DuffelBag") then
+                        --tchat("char "..Target.Name.." 6228961668")
                     end 
                 end) 
             end 
