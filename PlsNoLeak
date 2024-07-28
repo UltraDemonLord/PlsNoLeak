@@ -2499,10 +2499,11 @@ print("RTX toggle script loaded.")
 	
 
             addcommand("germanman",
-		"a",
+		"turns person into german man",
 		function()
 			for _Index, Target in pairs(GetPlayer(args[2])) do
                 tchat("char "..Target.Name.." 6228961668")
+	end
         end)
 
            addcommand("smite",
