@@ -94,13 +94,13 @@ if game.PlaceId == 112420803 or game.PlaceId == 115670532 or game.PlaceId == 333
     
     
 
-    local function space()
+    --[[local function space()
         rconsoleprint("")
         rconsoleprint("")
         rconsoleprint("-------------------------------------------------------------------------------------------------------")
         rconsoleprint("")
         rconsoleprint("")
-    end
+    end]]
 
     
         
@@ -930,7 +930,7 @@ end
     end
 
     local function color(Text)
-        rconsoleerr("@@" .. Text .. "@@")
+        --rconsoleerr("@@" .. Text .. "@@")
     end
 
     local function noti(Title, Text)
@@ -12128,7 +12128,7 @@ tchat("pclr")
         section9:addButton(
             "Clear Console",
             function()
-                rconsoleclear()
+                --rconsoleclear()
                 error(jotunnheim)
             end
         )
