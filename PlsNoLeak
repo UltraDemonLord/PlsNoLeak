@@ -1203,252 +1203,6 @@ end)
     local b = "[CMD] "
 
 
-    --[[coroutine.wrap(
-		function()
-			while auto do
-				res = rconsoleinput()
-				if res == _G.prefix .. "cmds" then
-                    error("\n\n[*]: No Prefix Needed\n\n")
-                    error("CMDS:\n")
-                    error(b .. "logservers")
-                    info("Pretty self explanatory, will log all servers")
-                    error(b .. "joinserver serverid")
-                    info(
-                        "Copy server id from logged servers and paste it after joinserver, will join the server obviously"
-                    )
-                    error(b .. "outfitlog player")
-                    info("Will log players outfits")
-                    error("part/1 - part/10 (Person299 required)")
-                    info(b .. "will spawn a fuckton of parts ranging from different sizes")
-                    error("blizzard player (Person299 required)")
-                    info(b .. "use part cmd first, creates a blizzard made out of parts")
-                    error(b .. "disable")
-                    info("disable blizzard")
-                    error(b .. "gayrate player")
-                    info("Will chat a random gayrate percentage")
-                    error(b .. "pwn player")
-                    info("Will jail player and superexplode him")
-                    error(b .. "break player")
-                    info("Will break the player into many parts (Credits to ripend for this one)")
-                    error(b .. "glitch player")
-                    info("Will make the players character glitch")
-                    error(b .. "slock player")
-                    info(
-                        "This will lock the player from your server, keeping them punished and blinded everytime they join"
-                    )
-                    error(b .. "unslock player")
-                    info(
-                        "removes player from serverlock"
-                    )
-                    
-                    error(b .. "bl player")
-                    info("blacklist player, will serverlock in every server")
-                    error(b .. "wl player")
-                    info("will manually wl player if your lazy ass cant copy his username onto the whitelist table")
-                    error(b .. "infgod player")
-                    info("Gives player infinite god and ff")
-                    error(b .. "obkill player")
-                    info("Grabs a part of the obby and kills the player with it lolol")
-                    error(b .. "spam cmd")
-                    info("Spams the written command")
-                    error(b .. "unspam")
-
-                    info("Disables spam")
-                    error(b .. "headrise player")
-                    info("makes the Player's head float")
-                    error(b .. "skybox player")
-                    info("makes a golden box above player")
-                    error(b .. "headroot player")
-                    info("will stick the players head into they're torso lel")
-                    error(b .. "icetower player")
-                    info("will freeze the player in a tower of ice")
-                    error(b .. "amputate player")
-                    info("will break the players avater")
-                    error(b .. "banhammer")
-                    info("will grant the player the banhammer (one time use) (POTATO KICK PATCHED, keeping it anyway lolz)")
-                    error(b .. "timeout player time s/m")
-                    info("puts the player in timeout (s for seconds, m for minutes)")
-                    error(b .. "?hook")
-                    info("hooks song id, gui one doesnt work and im not bothered to fix it")
-                    error(b .. "?unhook")
-                    info("unhooks song id")
-                    error(b .. "zecoolgun")
-                    info("cool gun i made")
-                    error("smap name")
-                    info("saves the map as the listed filename")
-                    error("lmap name")
-                    info("loads the saved map")
-                    error("flmap name")
-                    info("loads map faster but can be inaccurate")
-                    error(b .. "btools")
-                    info("grants client btools, use smap to save ur custom made map")
-                    error("fixvel")
-                    info("fixes maps velocity")
-                    error(b .. "laser player")
-                    info("kicks without freeze")
-                    error(b .. "smite player ")
-                    info("banhammer but it hits them?")
-                    error(b .. "laser player")
-                    info("fucks the player with lasers")
-                    error(b .. "cray player")
-                    info("fucks the player with lasers in a circle")
-                    error(b .. "crail player")
-                    info("fucks the player with railguns")
-                    error(b .. "rcrail player")
-                    info("crail but it makes the rails rainbow")
-                    error(b .. "srail")
-                    info("crail but a different version")
-                    error(b .. "rsrail player")
-                    info("srail but rainbow parts")
-                    error(b .. "ssnek player")
-                    info("fucks the player with idek")
-                    error(b .. "nuke player")
-                    info("fucks the player with airstrikes")
-                    error(b .. "spike player")
-                    info("hits the player with giant spikes")
-                    error(b .. "blowup player")
-                    info("rejoins the server")
-                    error(b .. "missile player")
-                    info("crail but with missile trackers")
-                    error(b .. "rail player")
-                    info("spams rails")
-                    error(b .. "laser player")
-                    info("spams lasers")
-                    error(b .. "serverlock")
-                    info("locks server, kicks anyone who joins")
-                    error(b .. "pdraw 0.1/10")
-                    info("lets you draw with parts")
-                    error(b .. "rpdraw")
-                    info("disables pdraw")
-                    error(b .. "pdelete")
-                    info("lets you delete parts")
-                    error(b .. "sbuild name")
-                    info("save builds with parts")
-                    error(b .. "lbuild name (CURRENTLY NOT WORKING)")
-                    info("loads a saved part build")
-                    error(b .. "load assetid")
-                    info("generates a model from Roblox Marketplace into kohls admin using parts, find the id on the model link (141865899 for a cool knuckles build)")
-                    error(b .. "pclr")
-                    info("removes transparent parts when building")
-                    error(b .. "unload")
-                    info("unloads build, note this is only if you haven't started building yet")
-                    error(b .. "serverlock")
-                    info("locks server")
-                    error(b .. "unslock")
-                    info("unlocks server")
-                    error(b .. "pban")
-                    info("bans player from pads")
-                    error(b .. "unpban")
-                    info("reverses pad ban")
-                    error(b .. "pban?")
-                    info("outputs list of padbanned players")
-                    error(b .. "g/c")
-                    info("loads up an fe cock using gears")
-                    error(b .. "g/ gearid    /    mod number")
-                    info("use g/ gearid first, then mod whatever number, this will load a change the gearpos making a 'modded' gear")
-                        error(b .. "shuffle")
-                        info("plays a random audio")
-                        error(b .. "!playlist")
-                    info("enables playlist, credits to soaryinglys")
-                    error(b .. "!select songnumber (1-63)")
-                    info("selects a random song from songIds")
-                    error(b .. "!skip")
-                    info("skips to next song")
-                    error(b .. "slow xnumber/ speed xnumber")
-                    info("very choppy because theres no way to make a slow and reverb lmao, note this is fe")
-                    error(b .. "distort")
-                    info("distorts sound")
-                    error(b .. "stop")
-                    info("stops music")
-                    error(b .. "pause")
-                    info("pauses music")
-                    error(b .. "resume")
-                    info("resumes music")
-                    error(b .. "nomusic")
-                    info("anti music, stops all music from playing")
-                    error(b .. "resmusic")
-                    info("disables anti music")
-                    error(b .. "bbox")
-                    info("gives golden boombox")
-                    error(b .. "superbbox")
-                    info("gives a lot of boomboxes in a circle")
-                    error(b .. "play id")
-                    info("plays song id on boomboxes")
-                    error(b .. "cage player")
-                    info("puts player in a cage")
-                    error(b .. "gearbl player")
-                    info("stops player from getting gears")
-                    error(b .. "breakcam player")
-                    info("breaks player's camera")
-                    error(b .. "fixcam player")
-                    info("fixes players camera")
-                    error(b .. "svrbreakcam")
-                    info("breaks everyones camera")
-                    error(b .. "sclr")
-                    info("clears server and fixes cameras")
-                    error(b .. "rk player")
-                    info("crashes player using rockets, depends on how good their device is")
-                    error(b .. "dropk player")
-                    info("funny troll")
-                    error(b .. "void player")
-                    info("puts player under the map")
-                    error(b .. "purge player")
-                    info("will stop the player from respawning by firing lasers")
-                    error(b .. "movespawn player")
-                    info("moves spawn points to player")
-                    error(b .. "serverlag num")
-                    info("temp lags the server by spamming cars, cars determined by num")
-                    error(b .. "fmusic name")
-                    info("will search the roblox API for any musics listed with specified name, eg fmusic mario")
-                    error(b .. "fgear me name")
-                    info("will search the roblox API for any gears listed with specified name, eg fgear me laser")
-                    error(b .. "res player")
-                    info("spam respawn and explode player, to annoy tf out of them")
-                    error(b .. "unres")
-                    info("disable duh")
-
-                    error(b .. "gungame 1-100")
-                    info("surround yourself with an armoury of guns, arrangement set based on number")
-                    error(b .. "gunswitch")
-                    info("selects a different gun")
-                    error(b .. "shoot player")
-                    info("will instantly shoot the player")
-                    error(b .. "rapidfire player")
-                    info("will rapidly shoot one gun at a time targetting the player")
-                    error(b .. "/a")
-                    info("grants attach tool, allows you to attach to any part including players (was mainly for testing purposes)")
-                    error(b .. "attach player")
-                    info("attaches to player duh")
-                    error(b .. "dfcolour")
-                    info("resets map paint to its default colour")
-                    error(b .. "tase player")
-                    info("tases player")
-                    error(b .. "smack player")
-                    info("smacks player with mackeral")
-                    error(b .. "usetools")
-                    info("uses all tools player has equipped")
-                    error(b .. "l/bh")
-                    info(":D")
-                    error(b .. "freg")
-                    info("looks for missing regen")
-                    error(b .. "ping")
-                    info("chats player ping")
-                    error(b .. "silc")
-                    info("silent crash the server")
-                        error(b .. "rj")
-                    info("rejoins the server")
-                    
-                else
-                    tchat(res)
-                    
-                end
-            end
-            
-        end
-    )()]]
-
-
-
 local admin = {prefix = "", version = "1.0"}
 local commands = {}
 local descriptions = {}
@@ -1649,7 +1403,482 @@ game.Players.LocalPlayer.Chatted:Connect(
     end
 )
 
+    addcommand("cmds", "", function()
+print("\n\n[*]: No Prefix Needed\n\n")
+print("CMDS:\n")
+print("More commands not listed, check out my Github and check them all out")
 
+
+
+
+print(b .. "kill player")
+print("Kills player obviously but with a death message")
+print("********************")
+
+print(b .. "promote")
+print("Promotes Discord Server")
+print("********************")
+
+print(b .. "logservers")
+print("Pretty self explanatory, will log all servers(doesnt work)")
+print("********************")
+
+print(b .. "joinserver serverid")
+print("Copy server id from logged servers and paste it after joinserver, will join the server obviously")
+print("********************")
+
+print(b .. "outfitlog player")
+print("Will log players' outfits")
+print("********************")
+
+print(b .. "part/1 - part/10 (Person299 required)")
+print("Will spawn a lot of parts ranging from different sizes")
+print("********************")
+
+print(b .. "blizzard player (Person299 required)")
+print("Use part cmd first, creates a blizzard made out of parts")
+print("********************")
+
+print(b .. "disable")
+print("Disable blizzard")
+print("********************")
+
+print(b .. "gayrate player")
+print("Will chat a random gayrate percentage")
+print("********************")
+
+print(b .. "pwn player")
+print("Will jail player and superexplode him")
+print("********************")
+
+print(b .. "break player")
+print("Will break the player into many parts (Credits to ripend for this one)")
+print("********************")
+
+print(b .. "glitch player")
+print("Will make the player's character glitch")
+print("********************")
+
+print(b .. "slock player")
+print("This will lock the player from your server, keeping them punished and blinded every time they join")
+print("********************")
+
+print(b .. "unslock player")
+print("Removes player from serverlock")
+print("********************")
+
+print(b .. "bl player")
+print("Blacklist player, will serverlock in every server")
+print("********************")
+
+print(b .. "wl player")
+print("Will manually whitelist player if you can't copy his username onto the whitelist table")
+print("********************")
+
+print(b .. "infgod player")
+print("Gives player infinite god and force field")
+print("********************")
+
+print(b .. "obkill player")
+print("Grabs a part of the obby and kills the player with it")
+print("********************")
+
+print(b .. "spam cmd")
+print("Spams the written command")
+print("********************")
+
+print(b .. "unspam")
+print("Disables spam")
+print("********************")
+
+print(b .. "headrise player")
+print("Makes the player's head float")
+print("********************")
+
+print(b .. "skybox player")
+print("Makes a golden box above player")
+print("********************")
+
+print(b .. "headroot player")
+print("Will stick the player's head into their torso")
+print("********************")
+
+print(b .. "icetower player")
+print("Will freeze the player in a tower of ice")
+print("********************")
+
+print(b .. "amputate player")
+print("Will break the player's avatar")
+print("********************")
+
+print(b .. "banhammer")
+print("Will grant the player the banhammer (one-time use)")
+print("********************")
+
+print(b .. "timeout player time s/m")
+print("Puts the player in timeout (s for seconds, m for minutes)")
+print("********************")
+
+print(b .. "?hook")
+print("Hooks song id, GUI one doesn't work and I'm not bothered to fix it")
+print("********************")
+
+print(b .. "?unhook")
+print("Unhooks song id")
+print("********************")
+
+print(b .. "zecoolgun")
+print("Cool gun I made")
+print("********************")
+
+print(b .. "smap name")
+print("Saves the map as the listed filename")
+print("********************")
+
+print(b .. "lmap name")
+print("Loads the saved map")
+print("********************")
+
+print(b .. "flmap name")
+print("Loads map faster but can be inaccurate")
+print("********************")
+
+print(b .. "btools")
+print("Grants client btools, use smap to save your custom-made map")
+print("********************")
+
+print(b .. "fixvel")
+print("Fixes map's velocity")
+print("********************")
+
+print(b .. "laser player")
+print("Kicks without freeze")
+print("********************")
+
+print(b .. "smite player")
+print("Banhammer but it hits them")
+print("********************")
+
+print(b .. "laser player")
+print("Hits the player with lasers")
+print("********************")
+
+print(b .. "cray player")
+print("Hits the player with lasers in a circle")
+print("********************")
+
+print(b .. "crail player")
+print("Hits the player with railguns")
+print("********************")
+
+print(b .. "rcrail player")
+print("Crail but it makes the rails rainbow")
+print("********************")
+
+print(b .. "srail")
+print("Crail but a different version")
+print("********************")
+
+print(b .. "rsrail player")
+print("Srail but rainbow parts")
+print("********************")
+
+print(b .. "ssnek player")
+print("Hits the player with unknown elements")
+print("********************")
+
+print(b .. "nuke player")
+print("Hits the player with airstrikes")
+print("********************")
+
+print(b .. "spike player")
+print("Hits the player with giant spikes")
+print("********************")
+
+print(b .. "blowup player")
+print("Rejoins the server")
+print("********************")
+
+print(b .. "missile player")
+print("Crail but with missile trackers")
+print("********************")
+
+print(b .. "rail player")
+print("Spams rails")
+print("********************")
+
+print(b .. "laser player")
+print("Spams lasers")
+print("********************")
+
+print(b .. "serverlock")
+print("Locks server, kicks anyone who joins")
+print("********************")
+
+print(b .. "pdraw 0.1/10")
+print("Lets you draw with parts")
+print("********************")
+
+print(b .. "rpdraw")
+print("Disables pdraw")
+print("********************")
+
+print(b .. "pdelete")
+print("Lets you delete parts")
+print("********************")
+
+print(b .. "sbuild name")
+print("Save builds with parts")
+print("********************")
+
+print(b .. "lbuild name (CURRENTLY NOT WORKING)")
+print("Loads a saved part build")
+print("********************")
+
+print(b .. "load assetid")
+print("Generates a model from Roblox Marketplace into Kohls admin using parts, find the id on the model link (141865899 for a cool Knuckles build)")
+print("********************")
+
+print(b .. "pclr")
+print("Removes transparent parts when building")
+print("********************")
+
+print(b .. "unload")
+print("Unloads build, note this is only if you haven't started building yet")
+print("********************")
+
+print(b .. "serverlock")
+print("Locks server")
+print("********************")
+
+print(b .. "unslock")
+print("Unlocks server")
+print("********************")
+
+print(b .. "pban")
+print("Bans player from pads")
+print("********************")
+
+print(b .. "unpban")
+print("Reverses pad ban")
+print("********************")
+
+print(b .. "pban?")
+print("Outputs list of padbanned players")
+print("********************")
+
+print(b .. "g/c")
+print("Loads up an FE cock using gears")
+print("********************")
+
+print(b .. "g/ gearid / mod number")
+print("Use g/ gearid first, then mod whatever number, this will load a change the gearpos making a 'modded' gear")
+print("********************")
+
+print(b .. "shuffle")
+print("Plays a random audio")
+print("********************")
+
+print(b .. "whosabacon")
+print("Lists bacons in server")
+print("********************")
+
+print(b .. "surprised?!")
+print("Summons the crash hats")
+print("********************")
+
+print(b .. "crash player")
+print("crashes player")
+print("********************")
+
+print(b .. "pacerlog")
+print("Spams the pacertest dialogue in logs")
+print("********************")
+
+print(b .. "!playlist")
+print("Enables playlist, credits to soaryinglys")
+print("********************")
+
+print(b .. "!select songnumber (1-63)")
+print("Selects a random song from songIds")
+print("********************")
+
+print(b .. "fixfilter")
+print("fixes the #### in chat")
+print("********************")
+
+print(b .. "cbomb")
+print("Summons Clown Bombs to remove water")
+print("********************")
+
+print(b .. "!skip")
+print("Skips to next song")
+print("********************")
+
+print(b .. "slow xnumber/ speed xnumber")
+print("Very choppy because there's no way to make a slow and reverb effect, note this is FE")
+print("********************")
+
+print(b .. "distort")
+print("Distorts sound")
+print("********************")
+
+print(b .. "stop")
+print("Stops music")
+print("********************")
+
+print(b .. "pause")
+print("Pauses music")
+print("********************")
+
+print(b .. "resume")
+print("Resumes music")
+print("********************")
+
+print(b .. "nomusic")
+print("Anti-music, stops all music from playing")
+print("********************")
+
+print(b .. "resmusic")
+print("Disables anti-music")
+print("********************")
+
+print(b .. "bbox")
+print("Gives golden boombox")
+print("********************")
+
+print(b .. "superbbox")
+print("Gives a lot of boomboxes in a circle")
+print("********************")
+
+print(b .. "play id")
+print("Plays song id on boomboxes")
+print("********************")
+
+print(b .. "cage player")
+print("Puts player in a cage")
+print("********************")
+
+print(b .. "gearbl player")
+print("Stops player from getting gears")
+print("********************")
+
+print(b .. "breakcam player")
+print("Breaks player's camera")
+print("********************")
+
+print(b .. "fixcam player")
+print("Fixes player's camera")
+print("********************")
+
+print(b .. "svrbreakcam")
+print("Breaks everyone's camera")
+print("********************")
+
+print(b .. "sclr")
+print("Clears server and fixes cameras")
+print("********************")
+
+print(b .. "rk player")
+print("Crashes player using rockets, depends on how good their device is")
+print("********************")
+
+print(b .. "dropk player")
+print("Funny troll")
+print("********************")
+
+print(b .. "void player")
+print("Puts player under the map")
+print("********************")
+
+print(b .. "purge player")
+print("Will stop the player from respawning by firing lasers")
+print("********************")
+
+print(b .. "movespawn player")
+print("Moves spawn points to player")
+print("********************")
+
+print(b .. "serverlag num")
+print("Temporarily lags the server by spamming cars, cars determined by num")
+print("********************")
+
+print(b .. "fmusic name")
+print("Will search the Roblox API for any music listed with specified name, e.g., fmusic Mario")
+print("********************")
+
+print(b .. "fgear me name")
+print("Will search the Roblox API for any gears listed with specified name, e.g., fgear me laser")
+print("********************")
+
+print(b .. "res player")
+print("Spam respawn and explode player, to annoy them")
+print("********************")
+
+print(b .. "unres")
+print("Disable duh")
+print("********************")
+
+print(b .. "gungame 1-100")
+print("Surround yourself with an armory of guns, arrangement set based on number")
+print("********************")
+
+print(b .. "gunswitch")
+print("Selects a different gun")
+print("********************")
+
+print(b .. "shoot player")
+print("Will instantly shoot the player")
+print("********************")
+
+print(b .. "rapidfire player")
+print("Will rapidly shoot one gun at a time targeting the player")
+print("********************")
+
+print(b .. "/a")
+print("Grants attach tool, allows you to attach to any part including players (mainly for testing purposes)")
+print("********************")
+
+print(b .. "attach player")
+print("Attaches to player")
+print("********************")
+
+print(b .. "dfcolour")
+print("Resets map paint to its default color")
+print("********************")
+
+print(b .. "tase player")
+print("Tases player")
+print("********************")
+
+print(b .. "smack player")
+print("Smacks player with mackerel")
+print("********************")
+
+print(b .. "usetools")
+print("Uses all tools player has equipped")
+print("********************")
+
+print(b .. "zawa")
+print(":D")
+print("********************")
+
+print(b .. "freg")
+print("Looks for missing regen")
+print("********************")
+
+print(b .. "ping")
+print("Chats player ping")
+print("********************")
+
+print(b .. "silc")
+print("Silently crashes the server")
+print("********************")
+
+print(b .. "rj")
+print("Rejoins the server")
+print("********************")
+end)
 
     addcommand("promote", "", function()
 task.wait(1)
