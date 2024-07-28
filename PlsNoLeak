@@ -12894,7 +12894,7 @@ function()
     end)
 
      -- credits to ii's admin
-    function checkIsCrashed()
+    --[[function checkIsCrashed()
         local Ping1 = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
             task.wait(1)
             local Ping2 = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
@@ -12926,7 +12926,7 @@ coroutine.wrap(function()
             end 
         end 
     end 
-end)()
+end)()]]
                  
 
 addcommand("purge", -- dont like the name "punish2"
