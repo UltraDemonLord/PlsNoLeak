@@ -10713,6 +10713,7 @@ tchat("pclr")
                         tchat("h/" .. v.Name .. " is using /c system lol")
                     end
 		    if msg == "skibidi" then
+			    tchat("invis ".. player.Name)
                             tchat("hat ".. player.Name .. " 18410314436")
 			    task.wait()
 			    chat("skibidied ".. player.Name .."'s toilet")
@@ -10756,6 +10757,7 @@ tchat("pclr")
                             tchat("h/".. player.Name .. " is using /c system lol")
                         end
 			if msg == "skibidi" then
+                            tchat("invis ".. player.Name)
                             tchat("hat ".. player.Name .. " 18410314436")
 			    task.wait()
 			    chat("skibidied ".. player.Name .."'s toilet")
