@@ -1398,7 +1398,7 @@ game.Players.LocalPlayer.Chatted:Connect(
                     answer = num1 / num2
                 end
             end
-            chat(answer)
+            chat(botname .. answer)
         end
     end
 )
@@ -1881,11 +1881,11 @@ print("********************")
 end)
 
     addcommand("promote", "", function()
-task.wait(1)
+task.wait(.25)
 	chat(botname)
-task.wait(1)
+task.wait(.25)
 	chat("Can be found at")
-task.wait(1)
+task.wait(.25)
 	chat(promoname)
 end)
 
@@ -1924,11 +1924,11 @@ addcommand("whosabacon", "Test command description", function()
     if targetPlayers then
         for _, p in pairs(targetPlayers) do
 		wait(.5)
-            chat(p.Name .. " Is A Bacon.")
+            chat(botname .. p.Name .. " Is A Bacon.")
 		wait(.5)
         end
     else
-        chat("No Bacons Found.")
+        chat(botname.. "No Bacons Found.")
     end
 end)
 
@@ -5272,7 +5272,7 @@ game.Players:Chat("ungear 000000000000000000000000000000000000000000000000000000
 				end
 			end
 			writefile(file, http:JSONEncode(colors))
-			chat("Saved map successfully as "..file)
+			chat(botname .. " Saved map successfully as "..file)
 			tchat("unpunish others")
 		end)
 
@@ -5316,13 +5316,13 @@ game.Players:Chat("ungear 000000000000000000000000000000000000000000000000000000
 			local colors = http:JSONDecode(readfile(file))
 			local xop = true
             if not colors[1]:match("Number") then 
-                chat("cannot locate 'Number Of Parts' in table")
+                chat(botname .. " cannot locate 'Number Of Parts' in table")
             else
             
             nparts = colors[1]:split(": ")
             nparts = nparts[2]
             if tonumber(nparts) > 500 then 
-                chat(file.." contains more then 500 parts, are you sure you want to load?")
+                chat(botname .. file.." contains more then 500 parts, are you sure you want to load?")
                 op = plr.Chatted:Connect(function(m)
                     if m == 'yes' then 
                         xop = false
@@ -5337,7 +5337,7 @@ game.Players:Chat("ungear 000000000000000000000000000000000000000000000000000000
             end 
                 
                  
-            chat("Loading "..nparts.." Parts..")
+            chat(botname .. "Loading "..nparts.." Parts..")
             local pcheck = false
             spawn(function()
                 task.wait(.1)
@@ -5459,10 +5459,10 @@ addcommand(
         end
         file = file .. ".json"
         if not isfile(file) then
-            return chat("No file found as - "..file)
+            return chat(botname.. " No file found as - "..file)
         end
         if isfile(file) then
-            chat(botname.."Loading build file - "..file)
+            chat(botname.. " Loading build file - "..file)
         end
         local http = game:GetService("HttpService")
         local colors = http:JSONDecode(readfile(file))
@@ -5723,10 +5723,10 @@ addcommand(
         end
         file = file .. ".json"
         if not isfile(file) then
-            return chat("No file found as - "..file)
+            return chat(botname .. " No file found as - "..file)
         end
         if isfile(file) then
-            chat("Loading build file - "..file)
+            chat(botname .. " Loading build file - "..file)
         end
         local http = game:GetService("HttpService")
         local colors = http:JSONDecode(readfile(file))
@@ -7245,13 +7245,13 @@ end
                 id = Target.UserId
                 url = httprequest({Url = "https://avatar.roblox.com/v1/users/" .. id .. "/outfits?itemsPerPage=20"})
                 outfits = http:JSONDecode(url.Body)
-                chat("\n" .. Target.Name .. "'s Outfits:\n")
+                chat(botname .. Target.Name .. "'s Outfits:\n")
                 for i, v in pairs(outfits.data) do
 			wait(1)
-                    chat(i .. ") Outfit Name: " .. v.name)
+                    chat(botname .. i .. ") Outfit Name: " .. v.name)
 			wait(1)
                 end
-                chat("\nTotal: " .. outfits.total)
+                chat(botname .. "\nTotal: " .. outfits.total)
             end
         end
     )
@@ -7390,7 +7390,7 @@ end
                 end) 
                 local b = Target.Chatted:Connect(function(msg)
                     if msg == '/timeout' and table.find(_G.timeout,Target.Name) then 
-                        chat("Your remaining time is "..tostring(timed).." seconds..")
+                        chat(botname .. " Your remaining time is "..tostring(timed).." seconds..")
                     end 
                 end)
                 for i = 1, timed do 
@@ -10716,18 +10716,18 @@ tchat("pclr")
 			    tchat("invis ".. player.Name)
                             tchat("hat ".. player.Name .. " 18410314436")
 			    task.wait()
-			    chat("skibidied ".. player.Name .."'s toilet")
+			    chat(botname .. "skibidied ".. player.Name .."'s toilet")
                         end
                     if msg:sub(1, 9) == "size all " then
                         if _G.antisize then
                             tchat("setgrav all nan")
-                            chat("h/" .. v.Name .. " tried to modify everyones size lol")
+                            chat(botname .. "h/" .. v.Name .. " tried to modify everyones size lol")
                         end
                     end
                     if msg:sub(1, 8) == "size me " then
                         if _G.antisize then
                             tchat("setgrav " .. v.Name .. " nan")
-                            chat("h/" .. v.Name .. " tried to modify their size lol")
+                            chat(botname .. "h/" .. v.Name .. " tried to modify their size lol")
                         end
                     end
                 end)
@@ -10760,7 +10760,7 @@ tchat("pclr")
                             tchat("invis ".. player.Name)
                             tchat("hat ".. player.Name .. " 18410314436")
 			    task.wait()
-			    chat("skibidied ".. player.Name .."'s toilet")
+			    chat(botname .. "skibidied ".. player.Name .."'s toilet")
                         end
                         if msg:sub(1, 9) == "size all " then
                             if _G.antisize then
@@ -12859,7 +12859,7 @@ addcommand("ping", -- dont like the name "punish2"
 "desc",
 function()
 
-        chat("Ping is "..tostring(plr:GetNetworkPing()*1000):split(".")[1].." ms")
+        chat(botname .. " Ping is "..tostring(plr:GetNetworkPing()*1000):split(".")[1].." ms")
 end)
 
 addcommand("hh", -- dont like the name "punish2"
