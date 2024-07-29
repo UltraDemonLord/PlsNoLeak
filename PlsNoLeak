@@ -736,7 +736,7 @@ local parts = {}
     addMusic("", 8494188412)
     addMusic("", 1847313950)
 
-    local botname = "<Jotunn.txt>"
+    local botname = "Jø†unnhεîm⚙"
     local guiname = "JotunnheimV1"
 
     print("ywes")
