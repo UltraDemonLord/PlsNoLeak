@@ -6,7 +6,7 @@
 
 -- // GUI Settings:
 
-_G.permadmin = true -- this will take a pad as soon as you join, set to true if you dont have perm (will skip servers with no pads when autocrashing)
+_G.permadmin = false -- this will take a pad as soon as you join, set to true if you dont have perm (will skip servers with no pads when autocrashing)
 _G.removeobbykill = true -- will auto remove obby kill once you join the server
 _G.autoantivamp = false -- will auto blacklist vamp gear
 _G.afkstatus = true
@@ -13295,7 +13295,7 @@ tchat("h/hello there \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" .. botnam
 ;
 
 local Settings = {
-    ["Autorun Commands"] = {"perm","blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","fixvelocity","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
+    ["Autorun Commands"] = {"blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","fixvelocity","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
    ["Default Whitelisted"] = {game.Players.LocalPlayer.Name, "Altsarecooleh", "NetflixCE2023", "Chase1880", "killer0900", "shawnofthedead", "SmellMaPits111222"},
     ["Default Banned"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People banned by default [Buggy]
     ["Default Softlocked"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People softlocked by Default
