@@ -10713,10 +10713,10 @@ tchat("pclr")
                         tchat("h/" .. v.Name .. " is using /c system lol")
                     end
 		    if msg == "skibidi" then
-			    tchat("invis ".. player.Name)
-                            tchat("hat ".. player.Name .. " 18410314436")
+			    tchat("invis " .. v.Name)
+                            tchat("hat " .. v.Name .. " 18410314436")
 			    task.wait()
-			    chat(botname .. "skibidied ".. player.Name .."'s toilet")
+			    chat(botname .. "skibidied ".. v.Name .."'s toilet")
                         end
                     if msg:sub(1, 9) == "size all " then
                         if _G.antisize then
