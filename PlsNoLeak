@@ -7849,6 +7849,7 @@ end)()
             spawnpoint.Name = "spawnpoint"
             spawnpoint.CFrame = plr.Character.HumanoidRootPart.CFrame
             error("Set spawnpoint to " .. tostring(spawnpoint.CFrame))
+	    chat(botname .. " Successfully Set Spawn Point")
             plr.CharacterAdded:Connect(
                 function(character)
                     if rs:FindFirstChild("spawnpoint") then
