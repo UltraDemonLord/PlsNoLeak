@@ -13326,7 +13326,7 @@ local Settings = {
 	}
     },
 ["Player Autorun Commands"] = { -- Automatically runs commands when these players are detected
-	["jhjssikeksms"] = "characteradded jhjssikeksms runcommand .ewj0ro",
+	["jhjssikeksms"] = "characteradded jhjssikeksms .runcommand crash jhjssik",
 	["skyzif"] = "characteradded skyzif runcommand hat skyzif 4910838379"
     }
 
