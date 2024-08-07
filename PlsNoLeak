@@ -2076,6 +2076,7 @@ addcommand("surprised!?", "", function()
             for _, command in ipairs(hatCommands) do
                 for j = 1, 50 do
                     game.Players:Chat(command)
+		    tchat("/clear")
                 end
             end
             task.wait() -- Adjust the wait time as needed based on rate limits
