@@ -383,7 +383,7 @@ end
     
   
     if _G.chatlogs then
-        loadstring(game:HttpGet(("https://pastebin.com/raw/yjFbhgVJ"), true))()
+        loadstring(game:HttpGet(("https://pastebin.com/K7dZGPBu"), true))()
     end
 
 
