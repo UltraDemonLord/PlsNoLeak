@@ -1945,7 +1945,7 @@ addcommand(
             function(a)
                 if a < currentHealth then
                     a = currentHealth
-                    tchat("h "  ..botname..  " .. k.Name .. " has died. -1 plr")
+                    tchat("h "  ..botname..  " .. k.Name .. has died. -1 plr")
                     tchat("name " .. k.Name .. " eliminated")
                 end
             end
