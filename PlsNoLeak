@@ -1889,6 +1889,71 @@ task.wait(.25)
 	chat(promoname)
 end)
 
+addcommand(
+    "game2",
+    "description here",
+    function()
+	tchat("h Credits to Vecko for letting me add this")
+	wait(1.5)
+        tchat("tp all me")
+        tchat("h " ..botname.. " Loading game-2... Please wait.")
+        wait(1)
+        tchat("reload all")
+        tchat("h "  ..botname..  " Loading game-2... Please wait.")
+        tchat("speed all 0")
+        tchat("m "  ..botname..  "Game-2 is starting...")
+        wait(2)
+        tchat("fix")
+        wait()
+        tchat("fix")
+        wait()
+        tchat("time 20")
+        tchat("fogend 100")
+        tchat("fogcolor 0 0 0")
+        tchat("outdoorambient 255 0 0")
+        tchat("h "  ..botname.. " Welcome to Vecko's knife game. Rules are simple, dont get eliminated. ")
+        wait(4)
+        tchat("h "  ..botname.. " The game will end when there is a winner.")
+        wait(5)
+        tchat("reload all")
+        wait(1)
+        tchat("h "  ..botname..  " Spread out! Everyone is fast. Timer starts now! No cheating. ")
+        tchat("speed all 30")
+        tchat("trail all red")
+        tchat("ungear all")
+        wait(6)
+        tchat("h "  ..botname..  " 5 second(s) till game-2 starts.")
+        wait(1)
+        tchat("h "  ..botname..  " 4 second(s) till game-2 starts.")
+        wait(1)
+        tchat("h "  ..botname..  " 3 second(s) till game-2 starts.")
+        wait(1)
+        tchat("h "  ..botname..  " 2 second(s) till game-2 starts.")
+        wait(1)
+        tchat("h "  ..botname..  " 1 second(s) till game-2 starts.")
+        wait(1)
+        tchat("ungear all")
+        tchat("ungod all")
+        tchat("unff all")
+        wait()
+        tchat("gear all 121946387")
+        tchat("h "  ..botname..  " GOOOO! [Tip]: Follow the red trails!")
+        k = game.Players:GetPlayers()
+        hum = game.Players:WaitForChild(k.Name):WaitForChild("Humanoid")
+        currentHealth = hum.Health
+        hum.HealthChanged:Connect(
+            function(a)
+                if a < currentHealth then
+                    a = currentHealth
+                    tchat("h "  ..botname..  " .. k.Name .. " has died. -1 plr")
+                    tchat("name " .. k.Name .. " eliminated")
+                end
+            end
+        )
+    end
+)
+
+
     addcommand("kill", "", function()
 	for _Index, Target in pairs(GetPlayer(args[2])) do
 	tchat("kill "..Target.Name)
