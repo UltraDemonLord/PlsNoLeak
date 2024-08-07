@@ -13027,7 +13027,7 @@ function()
 
                 local Mouse = game.Players.LocalPlayer:GetMouse() -- ???? lol?
 
-                for i = 1, 3 do
+                for i = 1, 10 do
                 args = {
                     [1] = Target.Character.HumanoidRootPart.Position --[[Vector3]]
                 }
@@ -13044,9 +13044,9 @@ function()
 
 spawn(function()
     task.wait(.1)
-                for i = 1, 4 do -- looped just to make sure yk
+                for i = 1, 10 do -- looped just to make sure yk
                         
-                    tchat(":punish "..Target.Name)
+                    tchat(":punish "..Target.Name.. " " ..Target.Name.. " " ..Target.Name)
                     task.wait(.1)    
                 end
             end)
