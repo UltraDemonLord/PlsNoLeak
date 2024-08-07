@@ -2070,7 +2070,6 @@ addcommand("surprised!?", "", function()
         local hatCommands = {
             "hat Altsarecooleh 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018137588505",
             "hat Altsarecooleh 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018131548964",
-	    "/clear",
         }
 
         for i = 1, 50 do
@@ -2086,6 +2085,7 @@ addcommand("surprised!?", "", function()
     for j = 1, 3 do
         sendHatCommands()
         tchat("clone me")
+	tchat("/clear")
     end
 end)
 
