@@ -1880,20 +1880,11 @@ print("Rejoins the server")
 print("********************")
 end)
 
-addcommand("felogs", "Enables the chatlogs", function()
-if _G.chatlogs == false then
-    _G.chatlogs = true
-	task.wait()
-    chat(botname.. " FE Chatlogs Enabled.")
-end
+addcommand("clrfe", "clears the chatlogs", function()
+    tchat("/clear")
+    chat(botname.. " Cleared the logs")
 end)
 
-addcommand("unfelogs", "Disables the chatlogs", function()
-if _G.chatlogs == true then
-    _G.chatlogs = false
-    chat(botname.. " FE Chatlogs disabled.")
-end
-end)
 
     addcommand("promote", "", function()
 task.wait(.25)
