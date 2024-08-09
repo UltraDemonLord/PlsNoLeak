@@ -1897,7 +1897,7 @@ addcommand("raver", "throws a raver", function()
     task.wait(1)
     chat("THREE!")
     task.wait(1)
-    chat("RUN THE BEAT!"
+    chat("RUN THE BEAT!")
 end)
 
     addcommand("promote", "", function()
