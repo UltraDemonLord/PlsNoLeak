@@ -13148,11 +13148,7 @@ local function checkPlayerGroupMembership(player)
         game.Players.LocalPlayer:Kick(kickMessage)
     end
 end
-
-game.Players.PlayerAdded:Connect(checkPlayerGroupMembership)
-
-for _, player in pairs(game.Players:GetPlayers()) do
-    checkPlayerGroupMembership(player)
+    checkPlayerGroupMembership(game.Players.LocalPlayer)
 end
     
 
