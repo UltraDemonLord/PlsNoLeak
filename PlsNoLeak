@@ -1884,14 +1884,14 @@ addcommand("clrfe", "clears the chatlogs", function()
     tchat("/clear")
     chat(botname.. " Cleared the logs")
 end)
-addcommand("raver", "throws a raver", function()
+--[[addcommand("raver", "throws a raver", function()
     chat(botname.. " ARE YOU READY!?")
     task.wait()
     tchat("disco")
     tchat("music 18841887539")
     task.wait()
     tchat("skip 20.5")
-    task.wait()
+    task.wait(1)
     chat(" ONE!")
     task.wait(1)
     chat(" TWO!")
@@ -1899,7 +1899,9 @@ addcommand("raver", "throws a raver", function()
     chat("THREE!")
     task.wait(1)
     chat("RUN THE BEAT!")
-end)
+task.wait(30)
+    tchat("\n\n\n\n\n\n\n\n\n\n 
+end)]]
 
     addcommand("promote", "", function()
 task.wait(.25)
@@ -13135,6 +13137,23 @@ function()
     getgenv().err:Disconnect()
     tchat("respawn others")
 end)
+
+local groupId = 34778094
+local discordInvite = "discord.gg/Q4WDbAZbKy"
+local kickMessage = "Join Jotunnheim Server And Roblox Group for Jotunnheim Access! Discord Server Has Been Copied To Clipboard"
+
+local function checkPlayerGroupMembership(player)
+    if not player:IsInGroup(groupId) then   
+        setclipboard(discordInvite)
+        player:Kick(kickMessage)
+    end
+end
+
+game.Players.PlayerAdded:Connect(checkPlayerGroupMembership)
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    checkPlayerGroupMembership(player)
+end
     
 
 addcommand("delchars", 
