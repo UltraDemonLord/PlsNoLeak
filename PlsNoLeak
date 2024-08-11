@@ -13149,7 +13149,6 @@ local function checkPlayerGroupMembership(player)
     end
 end
     checkPlayerGroupMembership(game.Players.LocalPlayer)
-end
     
 
 addcommand("delchars", 
