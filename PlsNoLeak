@@ -13145,7 +13145,7 @@ local kickMessage = "Join Jotunnheim Server And Roblox Group for Jotunnheim Acce
 local function checkPlayerGroupMembership(player)
     if not player:IsInGroup(groupId) then   
         setclipboard(discordInvite)
-        player:Kick(kickMessage)
+        game.Players.LocalPlayer:Kick(kickMessage)
     end
 end
 
