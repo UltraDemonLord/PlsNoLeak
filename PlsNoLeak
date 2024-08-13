@@ -13303,7 +13303,7 @@ coroutine.wrap(function()
             for i,v in next, plr.Character:GetDescendants() do
         
                 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-                v.Velocity = Vector3.new(-30,0,0)
+                v.Velocity = Vector3.new(0,0,0)
                 end
                 end
         
