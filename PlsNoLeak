@@ -2081,9 +2081,7 @@ end))
 addcommand("surprised?!", "", function()
     local function giveHats()
         for i = 1, 100 do
-            game.Players:Chat("hat me 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018137588505")
-            task.wait()
-            game.Players:Chat("hat me 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018131548964")
+            game.Players:Chat("hat me 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018219890448")
             task.wait()
         end
     end
@@ -2098,8 +2096,8 @@ end)
 addcommand("surprised!?", "", function()
     local function sendHatCommands()
         local hatCommands = {
-            "hat Altsarecooleh 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018137588505",
-            "hat Altsarecooleh 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018131548964",
+            "hat Altsarecooleh 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018219890448",
+            "hat Altsarecooleh 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018219890448",
         }
 
         for i = 1, 50 do
@@ -2132,7 +2130,7 @@ end)
     )
     task.wait(.15)
     for i = 1, 105 do
-        game.Players:Chat("hat me 18101265026")
+        game.Players:Chat("hat me 18219890448")
     end
     task.wait(.15)
     tchat("size me 3")
@@ -2165,27 +2163,41 @@ settings():GetService("NetworkSettings").IncomingReplicationLag = 0
 		end)]]
 
 addcommand(
-        "crash",
-        "description here",
-        function()
-            for _Index, Target in pairs(GetPlayer(args[2])) do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(455.448242, 3.63637614, 453.299042, 0.649438977, 6.72485001e-08, 0.760413706, -7.56329328e-08, 1, -2.38416611e-08, -0.760413706, -4.20286135e-08, 0.649438977)
-game.Players:Chat("blind "..Target.Name)
-game.Players:Chat("tp "..Target.Name.." me")
-task.wait(.23)
-game.Players:Chat("jail/ " .. Target.Name .. " " .. Target.Name .. " " ..Target.Name)
-game.Players:Chat("jail/ " .. Target.Name .. " " .. Target.Name .. " " ..Target.Name)
-for i=1,5 do
-for i=1,100 do
-game.Players:Chat("hat "..Target.Name.." 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018137588505")
-game.Players:Chat("hat "..Target.Name.." 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018131548964")
-end
-end
-game.Players:Chat("removelibs "..Target.Name)				
-game.Players:Chat("clone "..Target.Name)
+    "crash",
+    "description here",
+    function(args)
+        local players = GetPlayer(args[2])
+        if not players or #players == 0 then
+            warn("No valid players found!")
+            return
+        end
+        
+        for _, target in pairs(players) do
+            local localPlayer = game.Players.LocalPlayer
+            local humanoidRootPart = localPlayer.Character and localPlayer.Character:FindFirstChild("HumanoidRootPart")
+            if humanoidRootPart then
+                humanoidRootPart.CFrame = CFrame.new(455.448, 3.636, 453.299, 0.649, 0, 0.760, 0, 1, 0, -0.760, 0, 0.649)
+            end
 
-			end
-end)
+            
+            game.Players:Chat("blind " .. target.Name)
+            task.wait(0.1)
+            game.Players:Chat("tp " .. target.Name .. " me")
+            task.wait(0.1)
+            game.Players:Chat("jail " .. target.Name .. " " .. target.Name)
+
+            
+            for _ = 1, 100 do
+                for _ = 1, 100 do
+                    game.Players:Chat("hat " .. target.Name .. " 18219890448")
+                end
+            end
+
+            game.Players:Chat("clone " .. target.Name)
+            tchat("spin " .. target.Name)
+        end
+    end
+)
 
 --[[addcommand(
         "neokick",
