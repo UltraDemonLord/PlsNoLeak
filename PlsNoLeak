@@ -2168,7 +2168,7 @@ addcommand(
     function(args)
         local players = GetPlayer(args[2])
         if not players or #players == 0 then
-            warn("No valid players found!")
+            chat(botname.. "No valid players found!")
             return
         end
         
@@ -2189,7 +2189,7 @@ addcommand(
             
             for _ = 1, 100 do
                 for _ = 1, 100 do
-                    game.Players:Chat("hat " .. target.Name .. " 18219890448")
+                   game.Players:Chat("hat " .. target.Name .. " " .. zero .. "18219890448")
                 end
             end
 
