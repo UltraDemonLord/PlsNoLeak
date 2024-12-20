@@ -14,7 +14,7 @@ _G.whitelisted = {} -- basically grants them immunity to serverlocks and skips s
 _G.chatlogs = true
 _G.autocrasher = false --autocrasher script, make sure script is in autoexec and enable to true
 _G.RenderingEnabled = true -- This sets your rendering to false when autocrashing, saves CPU usage
-_G.updatedPlayerList = false -- Loads up a custom player list
+_G.updatedPlayerList = nil -- Loads up a custom player list
 _G.promote = true -- will chat discord server when crashing
 
 
