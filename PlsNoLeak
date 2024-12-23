@@ -13439,7 +13439,7 @@ tchat("h/hello there \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" .. botnam
 
 
         end -- For the game-id check
-[[;
+--[[
 
 local Settings = {
     ["Autorun Commands"] = {"blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
