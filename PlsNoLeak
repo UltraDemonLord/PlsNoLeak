@@ -3448,40 +3448,45 @@ addcommand("distort",
 		end)
 
 addcommand("fmusic",
-	"desc",
-	function()
-        local geared
-        if args[5] then 
-            geared = args[2], args[3], args[4], args[5]
-        elseif args[4] then 
-            geared = args[2], args[3], args[4]
-        elseif args[3] then 
-            geared = args[2], args[3]
-        elseif args[2] then 
-            geared = args[2]
-        end 
-
+    "desc",
+    function()
         local keyword = args[2]
         if not keyword then
-            chat(botname.. "No keyword provided for music search.")
+            error("No keyword provided for music search.")
         end
 
+        -- API URL
         local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword=" .. keyword .. "&Subcategory=9&Limit=10"
-        local success, returned = pcall(function()
-            return http:JSONDecode(game:HttpGet(url))
+
+        -- Make the request
+        local success, response = pcall(function()
+            return game:HttpGet(url)
         end)
 
-        if not success or not returned then
-            chat(botname.. "Catalog Audio API didn't return anything.")
+        if not success then
+            error("Failed to fetch data from the catalog.")
         end
 
-        local music = returned.data and returned.data[1]
+        -- Decode the JSON
+        local data
+        success, data = pcall(function()
+            return http:JSONDecode(response)
+        end)
+
+        if not success or not data or not data.data then
+            error("Failed to parse catalog data or no results found.")
+        end
+
+        -- Get the first song
+        local music = data.data[1]
         if not music or not music.id then
-            chat(botname.. "No Audio found for that search.")
+            error("No audio found for that search.")
         end
 
+        -- Output the result
         tchat("music " .. tostring(music.id))
     end)
+
 
         --[[addcommand("fmusic",
 		"desc",
