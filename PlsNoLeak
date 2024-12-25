@@ -4433,7 +4433,113 @@ repeat task.wait(.1)
 end)   
 
 
+addcommand("b/c", -- cock script but boomboxes
+		"desc",
+		function()
+            
+repeat task.wait(.1)
+    hasenoughcocks = false
 
+    gearid = '212641536'
+    toolname = 'SuperFlyGoldBoombox'
+    
+    if getgenv().giantcock == false then
+        getgenv().cockamount = 180 -- need to keep it to scale ofc
+    else
+        getgenv().cockamount = 450
+    end
+    
+
+
+    for i = 1, math.ceil(cockamount/3) do 
+    task.wait()
+    game.Players:Chat("gear me "..gearid)
+    end
+    
+    for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+    if i >= cockamount then
+    hasenoughcocks = true
+    end
+    end
+    
+    until hasenoughcocks == true
+    
+
+    
+   repeat     task.wait()
+        game.Players:Chat("gear me 34399428")
+   until plr.Backpack:FindFirstChild("ConfettiCannon")
+
+    
+    
+    loop = cockamount / 7 -- amount of guns used on each angle, dont need to change
+    
+    
+    local ballradius = 1
+    local cockradius = 0.7
+
+   -- jesus christ
+
+    local lp = game.Players.LocalPlayer
+    local Position = lp.Character.HumanoidRootPart.CFrame
+
+    
+    for i = 1, loop do
+    tool = lp.Backpack:FindFirstChild(toolname)
+    tool.GripPos = Vector3.new((ballradius * math.cos(i) + 0),(ballradius * math.sin(i) + 2), tool.Handle.Position.Z + -21)
+    tool.Parent = lp.Character
+    end
+    
+    for i = 1, loop do
+    tool = lp.Backpack:FindFirstChild(toolname)
+    tool.GripPos = Vector3.new((ballradius * math.cos(i) + 3),(ballradius * math.sin(i) + 2), tool.Handle.Position.Z + -21)
+    tool.Parent = lp.Character
+    end
+    
+    for i = 1, loop do
+    tool = lp.Backpack:FindFirstChild(toolname)
+    tool.GripPos = Vector3.new((ballradius * math.cos(i) + 1.5),(cockradius * math.sin(i) + 2), tool.Handle.Position.Z + -21)
+    tool.Parent = lp.Character
+    end
+    
+    
+    for i = 1, loop do
+    tool = lp.Backpack:FindFirstChild(toolname)
+    tool.GripPos = Vector3.new((cockradius * math.cos(i) + 1.5),(cockradius * math.sin(i) + 2), tool.Handle.Position.Z + -18)
+    tool.Parent = lp.Character
+    tool.Handle.Velocity = Vector3.new(1000, 1000, 10000)
+    end
+    
+    for i = 1, loop do
+    tool = lp.Backpack:FindFirstChild(toolname)
+    tool.GripPos = Vector3.new((cockradius * math.cos(i) + 1.5),(cockradius * math.sin(i) + 2), tool.Handle.Position.Z + -15)
+    tool.Parent = lp.Character
+    tool.Handle.Velocity = Vector3.new(1000, 1000, 10000)
+    end
+
+    for i = 1, loop do
+        tool = lp.Backpack:FindFirstChild(toolname)
+        tool.GripPos = Vector3.new((cockradius * math.cos(i) + 1.5),(cockradius * math.sin(i) + 2), tool.Handle.Position.Z + -12)
+        tool.Parent = lp.Character
+        tool.Handle.Velocity = Vector3.new(1000, 1000, 10000)
+        end
+
+        tool = lp.Backpack:FindFirstChild("ConfettiCannon")
+        tool.GripPos = Vector3.new((1 * math.cos(1) + 1),(cockradius * math.sin(1) + 1.7), tool.Handle.Position.Z + 12.5)
+        tool.Parent = lp.Character
+        tool.Handle.Velocity = Vector3.new(1000, 1000, 10000)
+
+
+
+
+
+
+
+    
+    
+    
+    
+end)
 
 	
 
