@@ -3447,7 +3447,7 @@ addcommand("distort",
 			end
 		end)
 
-addcommand("fmusic",
+--[[addcommand("fmusic",
     "desc",
     function()
         local keyword = args[2]
@@ -3485,10 +3485,10 @@ addcommand("fmusic",
 
         -- Output the result
         tchat("music " .. tostring(music.id))
-    end)
+    end)]]
 
 
-        --[[addcommand("fmusic",
+        addcommand("fmusic",
 		"desc",
 		function()
             local geared
@@ -3504,19 +3504,20 @@ addcommand("fmusic",
         end 
     end 
 end
-            local url = "https://search.roblox.com/catalog/json?CatalogContext=2&AssetTypeID=3&PageNumber=1&limit=10&Category=9&SortType=0&keyword="..args[2].."/"
+            local keyword = args[2]
+            local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword=" .. keyword .. "&Subcategory=9&Limit=10"
 			local returned = http:JSONDecode(game:HttpGet(url))
 			if not returned then
-				error("Catalog Audio API didn't return anything.")
+				chat(botname.. "Catalog Audio API didn't return anything.")
 			end
            local music = returned[1]
             if not music or not music.AssetId then
-				error("No Audio found for that search")
+				chat(botname.. "No Audio found for that search")
 			end
 
 	
 				tchat("music "..tostring(music.AssetId))
-        end)]]
+        end)
 
         addcommand("wl",
 		"desc",
