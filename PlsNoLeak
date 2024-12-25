@@ -3465,7 +3465,7 @@ if music and music.AssetId then
 else
     chat(botname.. "No Audio found for that search")
 end
-
+end)
 
        --[[ addcommand("fmusic",
 		"desc",
