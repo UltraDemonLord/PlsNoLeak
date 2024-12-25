@@ -3450,51 +3450,21 @@ addcommand("distort",
 addcommand("fmusic",
     "desc",
     function()
-        local geared = {}
-        if args[5] then 
-            geared = {args[2], args[3], args[4], args[5]}
-        elseif args[4] then 
-            geared = {args[2], args[3], args[4]}
-        elseif args[3] then 
-            geared = {args[2], args[3]}
-        elseif args[2] then 
-            geared = {args[2]}
-        end
-
-        local keyword = args[2] or ""
-        if keyword == "" then
-            chat(botname .. "You must provide a keyword to search for audio.")
-            return
-        end
-
-        local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword=" .. 
-            game:GetService("HttpService"):UrlEncode(keyword) .. "&Subcategory=9&Limit=10"
-
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if not success then
-            chat(botname .. "Failed to fetch data from the catalog API.")
-            return
-        end
-
-        local returned = game:GetService("HttpService"):JSONDecode(response)
-
-        if not returned or not returned.data or #returned.data == 0 then
-            chat(botname .. "No Audio found for that search.")
-            return
-        end
-
-        local music = returned.data[1]
-        if not music or not music.assetId then
-            chat(botname .. "No Audio found for that search.")
-            return
-        end
-
-        tchat("music " .. tostring(music.assetId))
-    end
-)
+        local HttpService = game:GetService("HttpService")
+local keyword = args[2]
+local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword=" .. keyword .. "&Subcategory=9&Limit=10"
+local response = HttpService:GetAsync(url)
+local returned = HttpService:JSONDecode(response)
+if not returned then
+    chat(botname.. "Catalog Audio API didn't return anything.")
+    return
+end
+local music = returned.Items[1]
+if music and music.AssetId then
+    tchat("music "..tostring(music.AssetId))
+else
+    chat(botname.. "No Audio found for that search")
+end
 
 
        --[[ addcommand("fmusic",
@@ -17709,8 +17679,7 @@ addCommand("antiepilepsy",{},function()
     Loops.antiepilepsy = true
     repeat game:GetService("RunService").RenderStepped:Wait() pcall(function()
         if workspace.Terrain["_Game"] and workspace.Terrain["_Game"].Folder and workspace.Terrain["_Game"].Folder:FindFirstChild("Flash") then
-		workspace.Terrain["_Game"].Folder:FindFirstChild("Flash"):Destroy()
-		game.Players:Chat("fix")
+		game.Players:Chat("unflash")
 	end
     end)until not Loops.antiabuse
 end)
