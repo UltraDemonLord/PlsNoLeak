@@ -3447,48 +3447,57 @@ addcommand("distort",
 			end
 		end)
 
---[[addcommand("fmusic",
+addcommand("fmusic",
     "desc",
     function()
-        local keyword = args[2]
-        if not keyword then
-            error("No keyword provided for music search.")
+        local geared = {}
+        if args[5] then 
+            geared = {args[2], args[3], args[4], args[5]}
+        elseif args[4] then 
+            geared = {args[2], args[3], args[4]}
+        elseif args[3] then 
+            geared = {args[2], args[3]}
+        elseif args[2] then 
+            geared = {args[2]}
         end
 
-        -- API URL
-        local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword=" .. keyword .. "&Subcategory=9&Limit=10"
+        local keyword = args[2] or ""
+        if keyword == "" then
+            chat(botname .. "You must provide a keyword to search for audio.")
+            return
+        end
 
-        -- Make the request
+        local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword=" .. 
+            game:GetService("HttpService"):UrlEncode(keyword) .. "&Subcategory=9&Limit=10"
+
         local success, response = pcall(function()
             return game:HttpGet(url)
         end)
 
         if not success then
-            error("Failed to fetch data from the catalog.")
+            chat(botname .. "Failed to fetch data from the catalog API.")
+            return
         end
 
-        -- Decode the JSON
-        local data
-        success, data = pcall(function()
-            return http:JSONDecode(response)
-        end)
+        local returned = game:GetService("HttpService"):JSONDecode(response)
 
-        if not success or not data or not data.data then
-            error("Failed to parse catalog data or no results found.")
+        if not returned or not returned.data or #returned.data == 0 then
+            chat(botname .. "No Audio found for that search.")
+            return
         end
 
-        -- Get the first song
-        local music = data.data[1]
-        if not music or not music.id then
-            error("No audio found for that search.")
+        local music = returned.data[1]
+        if not music or not music.assetId then
+            chat(botname .. "No Audio found for that search.")
+            return
         end
 
-        -- Output the result
-        tchat("music " .. tostring(music.id))
-    end)]]
+        tchat("music " .. tostring(music.assetId))
+    end
+)
 
 
-        addcommand("fmusic",
+       --[[ addcommand("fmusic",
 		"desc",
 		function()
             local geared
@@ -3517,7 +3526,7 @@ end
 
 	
 				tchat("music "..tostring(music.AssetId))
-        end)
+        end)]]
 
         addcommand("wl",
 		"desc",
