@@ -3464,7 +3464,7 @@ addcommand("fmusic",
         end 
     end 
 end
-            local url = "https://search.roblox.com/catalog/json?CatalogContext=2&AssetTypeID=3&PageNumber=1&limit=10&Category=9&SortType=0&keyword="..args[2].."/"
+            local url = "https://catalog.roblox.com/v1/search/items?Category=Audio&Keyword="..args[2].."&Subcategory=9&Limit=10"
 			local returned = http:JSONDecode(game:HttpGet(url))
 			if not returned then
 				chat(botname.. "Catalog Audio API didn't return anything.")
