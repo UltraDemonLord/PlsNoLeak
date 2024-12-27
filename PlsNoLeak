@@ -3447,7 +3447,37 @@ addcommand("distort",
 			end
 		end)
 
+
 addcommand("fmusic",
+		"desc",
+		function()
+            local geared
+            if args[5] then 
+            geared = args[2],args[3],args[4],args[5]
+            else if args[4] then 
+            geared = args[2],args[3],args[4]
+            else if args[3] then 
+            geared = args[2],args[3]
+            else if args[2] then 
+            geared = args[2]
+            end 
+        end 
+    end 
+end
+            local url = "https://search.roblox.com/catalog/json?CatalogContext=2&AssetTypeID=3&PageNumber=1&limit=10&Category=9&SortType=0&keyword="..args[2].."/"
+			local returned = http:JSONDecode(game:HttpGet(url))
+			if not returned then
+				chat(botname.. "Catalog Audio API didn't return anything.")
+			end
+           local music = returned[1]
+            if not music or not music.AssetId then
+				chat(botname.. "No Audio found for that search")
+			end
+
+	
+				tchat("music "..tostring(music.AssetId))
+        end)
+--[[addcommand("fmusic",
     "desc",
     function()
         local HttpService = game:GetService("HttpService")
@@ -3465,7 +3495,7 @@ if music and music.AssetId then
 else
     chat(botname.. "No Audio found for that search")
 end
-end)
+end)]]
 
        --[[ addcommand("fmusic",
 		"desc",
