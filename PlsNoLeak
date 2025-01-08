@@ -15682,18 +15682,18 @@ local Commands = Shortcuts:CreateSection({
             Callback = function()
                 local UserInputService = game:GetService("UserInputService")
         pcall(function()
-        game.Players.LocalPlayer.Character.BoomBox1.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox2.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox3.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox4.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox5.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox1.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox2.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox3.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox4.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox5.Name = "SuperFlyGoldBoombox"
         end)
         pcall(function()
-        game.Players.LocalPlayer.Character.BoomBox1.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox2.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox3.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox4.Name = "BoomBox"
-        game.Players.LocalPlayer.Character.BoomBox5.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox1.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox2.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox3.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox4.Name = "SuperFlyGoldBoombox"
+        game.Players.LocalPlayer.Character.BoomBox5.Name = "SuperFlyGoldBoombox"
         end)
         game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox1"
         game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox2"
