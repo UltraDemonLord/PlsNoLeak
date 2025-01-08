@@ -15676,6 +15676,568 @@ local Commands = Shortcuts:CreateSection({
                 runCommand(prefix.."cmds",{})
             end
     })
+
+   Commands:AddButton({
+            Name = "Piano player",
+            Callback = function()
+                local UserInputService = game:GetService("UserInputService")
+        pcall(function()
+        game.Players.LocalPlayer.Character.BoomBox1.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox2.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox3.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox4.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox5.Name = "BoomBox"
+        end)
+        pcall(function()
+        game.Players.LocalPlayer.Character.BoomBox1.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox2.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox3.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox4.Name = "BoomBox"
+        game.Players.LocalPlayer.Character.BoomBox5.Name = "BoomBox"
+        end)
+        game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox1"
+        game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox2"
+        game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox3"
+        game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox4"
+        game.Players.LocalPlayer.Character.BoomBox.Name = "BoomBox5"
+        game.Players.LocalPlayer.Character.BoomBox.Remote:FireServer("PlaySong",233836579)
+        game.Players.LocalPlayer.Character.BoomBox1.Remote:FireServer("PlaySong",233845680)
+        game.Players.LocalPlayer.Character.BoomBox2.Remote:FireServer("PlaySong",233852841)
+        game.Players.LocalPlayer.Character.BoomBox3.Remote:FireServer("PlaySong",233844049)
+        game.Players.LocalPlayer.Character.BoomBox4.Remote:FireServer("PlaySong",233854135)
+        game.Players.LocalPlayer.Character.BoomBox5.Remote:FireServer("PlaySong",233856105)
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        
+        game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
+        if not input:IsModifierKeyDown(Enum.ModifierKey.Shift) then
+            if input.KeyCode == Enum.KeyCode.One then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 0
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 7.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 7.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Two then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 0
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 7.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 7.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Three then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 0
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 7.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 7.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                end
+            elseif input.KeyCode == Enum.KeyCode.Four then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 8
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 15.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 15.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Five then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 8
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 15.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 15.9
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Six then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 8
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 15.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 15.9
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Seven then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 8
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 15.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 15.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Eight then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 16
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 23.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 23.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Nine then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 16
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 23.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 23.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Zero then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 16
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 23.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 23.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Q then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 24
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 31.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 31.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.W then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 24
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 32.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 32.9
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.E then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 24
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 32.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 32.9
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.R then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 24
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 32.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 32.9
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.T then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 32
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 39.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Y then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 32
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 39.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.U then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 32
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 39.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.P then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 32
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 39.9
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.A then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 32
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 39.9
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.S then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 48
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 55.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 55.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.D then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 48
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 55.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 55.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.F then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 48
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 55.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 55.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.G then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 56
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 63.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 63.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.H then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 56
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 63.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 63.9
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.J then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 56
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 63.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 63.9
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.K then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 56
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 63.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 63.9
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.L then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 64
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 71.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 71.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.Z then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 64
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 71.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 71.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.X then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 64
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 71.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 71.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.C then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 72
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 79.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 79.9
+                    game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.V then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 72
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 79.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 79.9
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.B then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 72
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 79.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 79.9
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.N then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 72
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 79.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 79.9
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+            elseif input.KeyCode == Enum.KeyCode.M then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 80
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 87.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 87.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+        elseif input.KeyCode == Enum.KeyCode.LeftBracket then
+        if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+        game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = true
+        game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition = 40
+        repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.TimePosition <= 39.9
+        game.Players.LocalPlayer.Character.BoomBox1.Handle.Sound.Playing = false
+        end
+        elseif input.KeyCode == Enum.KeyCode.RightBracket then
+        if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+        game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+        game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 40
+        repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 47.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 47.9
+        game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+        end
+        
+        end
+        end
+        end)
+            local isKeyPressed = function(key)
+                return UserInputService:IsKeyDown(key)
+            end
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.One and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 8
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 15.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 15.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.Two and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 8
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 15.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 15.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.Four and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 0
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 7.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 7.9
+                    game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.Five and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 0
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 7.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 7.9
+                    game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.Six and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 0
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 7.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 7.9
+                    game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.Eight and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 24
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 31.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 31.9
+                    game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+            if not isProcessed and input.KeyCode == Enum.KeyCode.Nine and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 24
+                    repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 31.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 31.9
+                    game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+            end
+        end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.Q and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 16
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 23.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 23.9
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.W and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 16
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 23.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 23.9
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.E and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 16
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 23.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 23.9
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.T and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 40
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 47.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 47.9
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+                end
+            end)
+                UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.P and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 40
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 47.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 47.9
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.Y and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 40
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 47.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 47.9
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.T and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 32
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 39.9
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.LeftBracket and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 32
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 39.9
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.RightBracket and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 32
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 39.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 39.9
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.S and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 56
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 63.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 63.9
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+                end
+            end)
+        UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.D and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 56
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 63.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 63.9
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.G and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 48
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 55.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 55.9
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.H and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 48
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 55.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 55.9
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.J and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 48
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 55.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 55.9
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.L and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition = 72
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition >= 79.5 and game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.TimePosition <= 79.9
+                game.Players.LocalPlayer.Character.BoomBox.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.Z and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition = 72
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition >= 79.5 and game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.TimePosition <= 79.9
+                game.Players.LocalPlayer.Character.BoomBox3.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.C and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition = 64
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition >= 71.5 and game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.TimePosition <= 71.9
+                game.Players.LocalPlayer.Character.BoomBox2.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.V and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition = 64
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition >= 71.5 and game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.TimePosition <= 71.9
+                game.Players.LocalPlayer.Character.BoomBox4.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            UserInputService.InputBegan:Connect(function(input, isProcessed)
+                if not isProcessed and input.KeyCode == Enum.KeyCode.B and isKeyPressed(Enum.KeyCode.LeftShift) then
+                if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = true
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition = 64
+                repeat task.wait() until game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition >= 71.5 and game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.TimePosition <= 71.9
+                game.Players.LocalPlayer.Character.BoomBox5.Handle.Sound.Playing = false
+                end
+                end
+            end)
+            end
+        })
+        
 end)
 
 addCommand("unkick",{},function()
