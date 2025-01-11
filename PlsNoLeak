@@ -13155,7 +13155,7 @@ addcommand("ping", -- dont like the name "punish2"
 "desc",
 function()
 
-        chat(botname .. " Ping is "..tostring(plr:GetNetworkPing()*1000):split(".")[1].." ms")
+        chat(botname .. " would have to say its "..tostring(plr:GetNetworkPing()*1000):split(".")[1].." ms")
 end)
 
 addcommand("hh", -- dont like the name "punish2"
