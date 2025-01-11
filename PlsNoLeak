@@ -750,36 +750,52 @@ local parts = {}
     local venyx = library.new(guiname, 5013109572)
 --TY Realest
 local UIS = game:GetService("UserInputService")
+
 local CoreGui = game:GetService("CoreGui")
+
 local guiname = CoreGui:WaitForChild("JotunnheimV1")
 
-local ToggleKey = Enum.KeyCode.RightControl
 
-UIS.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == ToggleKey then
-        guiname.Enabled = not guiname.Enabled
-    end
+
+local toggleUI = Instance.new("ScreenGui")
+
+toggleUI.Parent = game.Players.LocalPlayer.PlayerGui
+
+
+
+local JotToggle = Instance.new("TextButton")
+
+JotToggle.Text = "Jotunnheim\nUI Toggle"
+
+JotToggle.Parent = toggleUI
+
+JotToggle.Size = UDim2.new(0, 80, 0, 30)
+
+JotToggle.AnchorPoint = Vector2.new(0, 1)
+
+JotToggle.Position = UDim2.new(0, 10, 1, -10) 
+
+
+
+JotToggle.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+
+JotToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+
+local JotunnUIVenyx = game:GetService("CoreGui").JotunnheimV1.Main
+
+
+
+toggleButton.MouseButton1Click:Connect(function()
+
+    JotunnUIVenyx.Visible = not JotunnUIVenyx.Visible
+
 end)
 
-guiname.Enabled = false  -- Ensure the GUI is initially hidden
 
-	
---[[local Settings = {Prefix = "", ToggleGui = "RightControl"}
-local UIS = game:GetService("UserInputService")
-function ToggleGuis()
-    for i,v in pairs (game.CoreGui:GetDescendants()) do
-        if v.Name ~= "JotunnheimV1" then
-            descendant.Visible = not descendant.Visible
-        end
-    end
-end
 
-UIS.InputBegan:Connect(function(INPUT)
-    if INPUT.UserInputType == Enum.UserInputType.Keyboard and INPUT.KeyCode == Enum.KeyCode[Settings.ToggleGui] then
-        ToggleGuis();
-    end
-end)
-ToggleGuis()]]
+guiname.Enabled = true
 	
 
 
@@ -13469,7 +13485,7 @@ coroutine.wrap(function()
             for i,v in next, plr.Character:GetDescendants() do
         
                 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-                v.Velocity = Vector3.new(0,0,0)
+                --v.Velocity = Vector3.new(0,0,0)
                 end
                 end
         
