@@ -7561,10 +7561,12 @@ addcommand(
         local http = game:GetService("HttpService")
         table.insert(colors, "Number Of Parts : " .. _G.i)
 
+        -- Explicitly reference the desired folder
         local folder = workspace.Terrain._Game.Folder
         if folder then
             for _, v in ipairs(folder:GetChildren()) do
-                if v:IsA("Part") then
+                if v:IsA("Part") and v.Name:match("^Part%d*$") then
+                    -- Match names like "Part", "Part1", "Part2", etc.
                     table.insert(colors, v.Name .. " : " .. tostring(v.CFrame.X) .. ", " .. tostring(v.CFrame.Y) .. ", " .. tostring(v.CFrame.Z))
                 end
             end
@@ -7576,6 +7578,7 @@ addcommand(
         chat(botname.. " Saved build successfully as " .. file)
     end
 )
+
 
         --[[addcommand(
 		"sbuild",
