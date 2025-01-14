@@ -7548,8 +7548,36 @@ game.Players:Chat("ungear 000000000000000000000000000000000000000000000000000000
 			chat(botname .. " Saved map successfully as "..file)
 			tchat("unpunish others")
 		end)
+addcommand(
+    "sbuild",
+    "description here",
+    function()
+        local colors = {}
+        if args[2] then
+            file = args[2]
+        end
+        file = file .. ".json"
+        task.wait(0.2)
+        local http = game:GetService("HttpService")
+        table.insert(colors, "Number Of Parts : " .. _G.i)
 
-        addcommand(
+        local folder = workspace.Terrain._Game.Folder
+        if folder then
+            for _, v in ipairs(folder:GetChildren()) do
+                if v:IsA("Part") then
+                    table.insert(colors, v.Name .. " : " .. tostring(v.CFrame.X) .. ", " .. tostring(v.CFrame.Y) .. ", " .. tostring(v.CFrame.Z))
+                end
+            end
+        else
+            error("Specified folder does not exist!")
+        end
+
+        writefile(file, http:JSONEncode(colors))
+        chat(botname.. " Saved build successfully as " .. file)
+    end
+)
+
+        --[[addcommand(
 		"sbuild",
 		"description here",
 		function()
@@ -7568,7 +7596,7 @@ game.Players:Chat("ungear 000000000000000000000000000000000000000000000000000000
 			end
 			writefile(file, http:JSONEncode(colors))
 			error("Saved build successfully as "..file)
-		end)
+		end)]]
 
         addcommand(
 		"lbuild",
