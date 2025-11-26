@@ -15613,15 +15613,15 @@ local formatted_time = string.format("%.1f", diff_seconds)
 
 local Settings = {
     ["Autorun Commands"] = {"blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","autogod","crashdetector","antiskydive","antiepilepsy"}, -- Commands to run automatically
-   ["Default Whitelisted"] = {game.Players.LocalPlayer.Name, "jjjuuikjjikkju", "Vladi3", "Altsarecooleh", "NetflixCE2023", "Chase1880", "killer0900", "shawnofthedead", "SmellMaPits111222"},
-    ["Default Banned"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People banned by default [Buggy]
-    ["Default Softlocked"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People softlocked by Default
+   ["Default Whitelisted"] = {},
+    ["Default Banned"] = {}, -- People banned by default [Buggy]
+    ["Default Softlocked"] = {}, -- People softlocked by Default
     ["Player Crash Settings"] = {["Vampire"] = false, ["Players"] = {}}, -- Automatically crashes server if one of these players are in it
     ["Prefix"] = ".", -- Prefix used for running commands
     ["Person299's Admin"] = true, -- If you do not own Person299's Admin, some commands will be fixed appropriately
     ["Legacy Serverlock"] = false, -- Softlocks players instead of crashing
     ["Punish Based Softlock"] = true, -- Uses punishing for softlocking instead of sizing and sending to heaven
-    ["Script Name"] = "Whats Up Guys!", -- Change the name of the script, default "ii' s St upid Ad min"
+    ["Script Name"] = nil, -- Change the name of the script, default "ii' s St upid Ad min"
     ["Welcome Message"] = nil, -- Change the message that is shown when running the script, default "Successfully ran."
     
     ["Auto Crasher"] = { -- Automatically serverhop and crash servers
