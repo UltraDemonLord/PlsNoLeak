@@ -15605,14 +15605,14 @@ simulate24HourCycle()]]
 local starttime2 = os.clock()
 local diff_seconds = starttime2 - starttime1
 local formatted_time = string.format("%.1f", diff_seconds)
-tchat("h/hello there \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" .. botname .. " Loadtime: " .. formatted_time .. " seconds")
+--tchat("h/hello there \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" .. botname .. " Loadtime: " .. formatted_time .. " seconds")
 
 
         end -- For the game-id check
 
 
 local Settings = {
-    ["Autorun Commands"] = {"blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","afkindicator","antikick","antiservercrash","antiabuse","nokill","antivoid","antifly","autogod","crashdetector","antiskydive","antigrav","antiepilepsy"}, -- Commands to run automatically
+    ["Autorun Commands"] = {"blacklisttools PortableJustice,DaggerOfShatteredDimensions;BlackHoleSword;HotDogOnAStick;AzureDragonMagicSlayerSword;BitePlant","autogod","crashdetector","antiskydive","antiepilepsy"}, -- Commands to run automatically
    ["Default Whitelisted"] = {game.Players.LocalPlayer.Name, "jjjuuikjjikkju", "Vladi3", "Altsarecooleh", "NetflixCE2023", "Chase1880", "killer0900", "shawnofthedead", "SmellMaPits111222"},
     ["Default Banned"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People banned by default [Buggy]
     ["Default Softlocked"] = {"normalizzed","Let_emhanglow","imanoobban","bcakroms2"}, -- People softlocked by Default
@@ -15622,7 +15622,7 @@ local Settings = {
     ["Legacy Serverlock"] = false, -- Softlocks players instead of crashing
     ["Punish Based Softlock"] = true, -- Uses punishing for softlocking instead of sizing and sending to heaven
     ["Script Name"] = "Whats Up Guys!", -- Change the name of the script, default "ii' s St upid Ad min"
-    ["Welcome Message"] = "I Dont Cheat, Its Just A Really Good Gaming Chair!", -- Change the message that is shown when running the script, default "Successfully ran."
+    ["Welcome Message"] = nil, -- Change the message that is shown when running the script, default "Successfully ran."
     
     ["Auto Crasher"] = { -- Automatically serverhop and crash servers
 	["Enabled"] = false,
@@ -15630,7 +15630,7 @@ local Settings = {
 	["Serverhop Time"] = 7, -- Serverhops after specified amount of time
 	["Timeout"] = 9, -- Gives up on joining a server after a specified amount of time
 	["Commands"] = {"music 6772846771"}, -- Commands to run on join
-	["Command Delay"] = -1, -- Delay between commands, -1 is none
+	["Command Delay"] = 2, -- Delay between commands, -1 is none
 	["Time Before Crash"] = 1, -- Time before crashing server, -1 is instant
 	["Vampire"] = true, -- Use Vampire Vanquisher to crash the servers
 	["Whitelisted Players"] = {}, -- Do not crash servers with these players in it
@@ -15687,7 +15687,7 @@ local plr = owner
 local chr = owner.Character
 local character = owner.Character
 local char = owner.Character
-local consoleOn = true
+local consoleOn = false
 local running = true
 local prefix = Settings["Prefix"]
 local ScriptName = Settings["Script Name"]
