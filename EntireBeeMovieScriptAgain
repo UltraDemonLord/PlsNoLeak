@@ -4308,10 +4308,10 @@ tchat("pm/".. Target.Name .." \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou Are 
 
     addcommand("superbbox", "", function()
         -- for i = 1, 5 do
-         for i = 1, 200 do
+         for i = 1, 17 do
          game:GetService("TextChatService"):WaitForChild("TextChannels"):WaitForChild("RBXGeneral"):SendAsync("gear me 212641536")-- 1837881688
          end 
-         task.wait(.7)
+         task.wait(1)
          for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
             coroutine.wrap(function()
                 pcall(function()
@@ -19984,7 +19984,7 @@ addCommand("loudboombox",{"amount","id","range"},function(args)
 end
 wait(0.1)
 for i,v in pairs(plr.Backpack:GetChildren()) do v.GripPos = Vector3.new(math.random(tonumber(args[3])*-2,args[3]),math.random(tonumber(args[3])*-2,args[3]),math.random(tonumber(args[3])*-2,args[3])) v.Parent=chr end
-wait()
+wait(1)
 for i,v  in pairs(chr:GetChildren()) do
     if v:IsA("Tool") then
         pcall(function()
